@@ -1,17 +1,19 @@
+/*----------------------Import font------------------------*/
+@import url('https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
-
 html {
-    // 10px div by def of 16px
     font-size: 62.5%;
 }
-
 body {
-    box-sizing: border-box;
-    background: $colour-secondary;
+   margin:0 auto;
+   max-width:1400px;
+   font-family:$font-text;
 }

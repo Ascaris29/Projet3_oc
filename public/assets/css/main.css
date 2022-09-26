@@ -10,7 +10,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -31,6 +32,7 @@ body {
   border-radius: 50px;
   font-size: 2rem;
   border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
 }
 .presentation__button a {
@@ -43,8 +45,12 @@ header {
   padding-top: 30px;
 }
 header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .presentation {
@@ -53,15 +59,33 @@ header .header__logo {
 .presentation .form {
   background-color: #f2f2f2;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .presentation .form__textarea {
   border: none;
   background-color: transparent;
   text-align: center;
   font-size: 17px;
+}
+.presentation .form__textarea::-webkit-input-placeholder {
+  color: #131313;
+}
+.presentation .form__textarea::-moz-placeholder {
+  color: #131313;
+}
+.presentation .form__textarea:-ms-input-placeholder {
+  color: #131313;
+}
+.presentation .form__textarea::-ms-input-placeholder {
+  color: #131313;
 }
 .presentation .form__textarea::placeholder {
   color: #131313;
@@ -89,5 +113,3 @@ header .header__logo {
   font-size: 2rem;
   font-weight: 300;
 }
-
-/*# sourceMappingURL=mobile.css.map */

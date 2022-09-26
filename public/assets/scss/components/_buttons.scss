@@ -1,3 +1,19 @@
-.btn {
-    @include btn
+/*----------------------Button presentation-------------------*/
+
+.presentation{
+    &__button{
+        
+        display:block;
+        margin:auto;
+        padding:20px;
+        border-radius:50px;  
+        font-size: $size-text;
+        border:none;
+        background:linear-gradient($color-secondary, $color-primary);
+        a{
+            font-style:none;
+            text-decoration: none;
+            color:$white;
+        }
+    }
 }

@@ -1,9 +1,17 @@
-$colour-primary: #15DEA5;
-$colour-secondary: #001534;
-$colour-accent: #D6FFF5;
-$colour-white: #fff;
-$colour-invalid: #DB464B;
+/*--------------------Color css----------------------*/
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$white:#FFF;
+$black:#131313;
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
+/*--------------------Font family---------------------*/
+$font-text:"Roboto";
+$font-title:"Shrikhand";
+
+/*----------------------Font weight--------------------*/
+$font-bold:600;
+$font-light:300;
+/*--------------------Font size--------------------------*/
+$size-text:2rem;
+$size-title:3rem;

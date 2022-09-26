@@ -15,24 +15,28 @@
 <body>
     <header>
         <div class="header__logo">
-            <img src="public/images/logo/ohmyfood.png" alt="logo du site booki" class="header__photo" width="100">
+            <img src="public/images/logo/ohmyfood.png" alt="logo du site booki" class="header__photo" width="200">
         </div>
     </header>
     <main>
         <section class="presentation">
             <form method="post" class="form presentation__form">
-                <i class="fa-sharp fa-solid fa-location-dot form__icon"></i>
-                    <input type="text" placeholder="Paris, Belleville" id="name" class="form__textarea" required>
+                <div class="form__icon">
+                    <i class="fa-sharp fa-solid fa-location-dot form__i"></i>
+                </div>  
+                    <input type="text" placeholder="Paris, Belleville" id="name" class="form__textarea" required size="15">
             </form>
-            <h1 class="presentation__heading">
-                Réservez le menu qui vous convient
-            </h1>
-            <p class="presentation__text">
-                Découvrez des restaurants d'exception séléctionnés par nos soins.
-            </p>
-            <button class="presentation__button">
-                Explorez nos restaurants
-            </button>
+            <div class="presentation__container">
+                <h1 class="presentation__heading">
+                    Réservez le menu qui vous convient
+                </h1>
+                <p class="presentation__text">
+                    Découvrez des restaurants d'exception, séléctionnés par nos soins.
+                </p>
+                <button class="presentation__button">
+                    <a href="#">Explorez nos restaurants</a>
+                </button>
+            </div>
         </section>
         <section class="fonctionnement">
             <h2 class="fonctionnement__heading">Fonctionnement</h2>
