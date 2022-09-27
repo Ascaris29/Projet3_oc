@@ -1,0 +1,24 @@
+.footer{
+    background-color:lighten($black,19);
+    padding:20px;
+    &__logo{
+        font-family:$font-title;
+        color:$white;
+        font-size:2rem;
+    }
+    &__list{
+        display:flex;
+        flex-direction:column;
+        list-style-type: none;
+        padding-top:15px;
+    }
+    &__items{
+        padding-top:10px;
+    }
+    &__items a{
+        text-decoration:none;
+        color:$white;
+        font-size:$size-text;
+    }
+
+}
