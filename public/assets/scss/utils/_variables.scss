@@ -13,5 +13,13 @@ $font-title:"Shrikhand";
 $font-bold:600;
 $font-light:300;
 /*--------------------Font size--------------------------*/
-$size-text:2rem;
-$size-title:3rem;
+$size-text:1.8rem;
+$size-title:2.5rem;
+
+/*---------------------margin-------------------------*/
+$basic-padding:60px 20px;
+/*------------------box-shadow----------------------*/
+$shadow: 0px 0px 21px -11px rgba(66, 68, 90, 1);
+
+/*-----------------------------Fond background----------------------------*/
+$clear-back:darken($white,2%);
