@@ -1,18 +1,42 @@
+
 .presentation{
     padding-top:20px;
+    @include responsive-desktop{
+        background:url("../../images/restaurants/presentation_img.jpg"); 
+        background-size: cover;
+        background-position: 0% 65%;
+        margin-top:30px;
+        padding:0;
+        height:500px;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+    }
     .form{
         background-color:darken($white, 5%);
         height:60px;
         display:flex;
         justify-content:center;
         align-items:center;
+        @include responsive-desktop{
+            background-color:transparent;
+            display:block;
+            text-align:right;
+            color:$white;
+        }
         &__textarea{
             border:none;
             background-color:transparent;
             text-align:center;
             font-size:17px;
+            @include responsive-desktop{
+                margin-right:20px;
+            }
             &::placeholder{
                 color:$black;
+                @include responsive-desktop{
+                    color:$white;
+                }
             }
         }
         &__icon{
@@ -26,34 +50,60 @@
     &__container{
         background-color:$clear-back;
         padding-bottom:60px;
+        position:relative;
+        @include responsive-desktop{
+            padding-left:20px;
+            background:transparent;
+            padding-bottom:0;
+        }
     }
     &__heading{
         padding:50px 40px 10px 30px;
         font-size:$size-title;
         text-align:center;
         line-height:3.5rem;
+        @include max-width;
+        @include responsive-desktop{
+            padding-left:0;
+            color:$white;
+        }
     }
     &__text{
         padding:0 30px 30px;
         text-align:center;
         font-size:$size-text;
         font-weight:$font-light;
+        @include max-width;
+        @include responsive-desktop{
+            padding-left:0;
+            color:$white;
+        }
     }
     
 }
 
 .fonctionnement{
     padding:$basic-padding;
-    display:flex;
-    flex-direction:column;
-    gap:30px;
+    
     &__heading{
         font-size:$size-title;
+        @include max-width;
     }
     &__article{
         &--lila{
             background-color:lighten($color-primary, 35);
         }
+    }
+    &__bloc{
+                padding:60px 0;
+                display:flex;
+                flex-direction:column;
+                gap:30px;
+                @include max-width;
+                @include responsive-desktop{
+                    flex-direction:row;
+                    justify-content:space-between;
+                }
     }
     .article{
         box-shadow:$shadow;
@@ -66,6 +116,10 @@
         justify-content: center;
         align-items:center;
         position:relative;
+        @include responsive-desktop{
+            width:calc(100%/3);
+            gap:30px;
+        }
       &__number{
           border-radius:50px;
           background-color:$color-primary;
@@ -80,25 +134,34 @@
               color:$color-primary;
           }
       }
-      
     }
 }
 
 .restaurants{
     padding: $basic-padding;
     background-color:$clear-back;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    
     &__heading{
         font-size:$size-title;
         padding-bottom:20px;
+        @include max-width;
     }
-   
+    &__bloc{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+        @include max-width;
+        @include responsive-desktop{
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content:space-between;
+        }
+    }
     .article{
         border-radius:20px;
         box-shadow:$shadow;
+            @include responsive-desktop{
+                width:22%; 
+            }
         a{
             display:flex;
             flex-direction:column;
@@ -109,7 +172,7 @@
         }
         &__cardMenu{
             position:absolute;
-            left:75%;
+            right:1%;
             top:5%;
             background-color:$color-tertiary;
             padding:5px 10px;
