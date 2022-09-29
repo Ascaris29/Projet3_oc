@@ -182,6 +182,7 @@
             text-decoration: none;
             color:$black;
             position:relative;
+            @include cursor-hand;
         }
         &__cardMenu{
             position:absolute;

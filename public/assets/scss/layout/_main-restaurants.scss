@@ -17,7 +17,6 @@
         width:100%;
         height:100%;
         object-fit: cover;
-     
     }
 }
 .presentation-restaurant{
@@ -33,9 +32,33 @@
         display:flex;
         align-items:center;
         justify-content:space-between;
+        @include responsive-tablet{
+            @include max-width;
+        }
+        i{
+            @include cursor-hand;
+            @include responsive-tablet{
+                margin-left:20px;
+            }
+        }   
+    }
+    &__bloc{
+        @include responsive-tablet{
+            display:flex;
+            gap:20px;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            @include max-width;
+        }
     }
     .card{
         padding-top:40px;
+        @include responsive-tablet{
+            width:calc(100%/2.1);
+        }
+        @include responsive-desktop{
+            width:calc(100%/3.3);
+        }
         &__heading{
             text-transform: uppercase;
             font-size:$size-text;
@@ -43,10 +66,11 @@
             position:relative;
             padding-bottom:5px;
             font-size:$size-text;
+            width:60px;
             &::after{
                 position:absolute;
                 content:"";
-                width:12%;
+                width:75%;
                 height:3px;
                 background-color:$color-tertiary;
                 bottom:0;
@@ -59,6 +83,12 @@
             box-shadow: $shadow;
             border-radius:10px;
             padding:10px 10px;
+            display:flex;
+            flex-direction:column;
+            @include responsive-desktop{
+                height:80px;
+                justify-content: space-between;
+            }
             &__heading{
                 font-size:$size-text;
                 font-weight:$font-normal;

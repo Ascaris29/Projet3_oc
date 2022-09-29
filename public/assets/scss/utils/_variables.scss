@@ -25,4 +25,8 @@ $shadow: 0px 0px 21px -11px rgba(66, 68, 90, 1);
 /*-----------------------------Fond background----------------------------*/
 $clear-back:darken($white,2%);
 
-/*-----------------------------max-width---------------------------------*/
+
+$light-secondary:lighten($color-secondary,3);
+$light-primary:lighten($color-primary,3);
+$dark-secondary:darken($color-secondary, 10);
+

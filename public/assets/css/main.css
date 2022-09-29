@@ -6,7 +6,6 @@
 /*---------------------padding-------------------------*/
 /*------------------box-shadow----------------------*/
 /*-----------------------------Fond background----------------------------*/
-/*-----------------------------max-width---------------------------------*/
 /*----------------------------------------Base---------------------------------------------------*/
 /*----------------------Import font------------------------*/
 @import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500;700&display=swap");
@@ -36,17 +35,23 @@ body {
   border-radius: 50px;
   font-size: 1.8rem;
   border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  cursor: pointer;
+  background: linear-gradient(150deg, #FF79DA 5%, 30%, #9356DC 65%);
   color: #FFF;
   max-width: 1400px;
   margin: auto;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+.presentation__button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(#ff88de, #9b63df);
 }
 .presentation__button a {
   font-style: none;
   text-decoration: none;
   color: #FFF;
+}
+.presentation__button a {
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
 
 .presentation-restaurant__button {
@@ -55,19 +60,25 @@ body {
   border-radius: 50px;
   font-size: 1.8rem;
   border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  cursor: pointer;
+  background: linear-gradient(150deg, #FF79DA 5%, 30%, #9356DC 65%);
   color: #FFF;
   max-width: 1400px;
   margin: auto;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
   padding: 15px 40px;
   margin-top: 40px;
+}
+.presentation-restaurant__button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(#ff88de, #9b63df);
 }
 .presentation-restaurant__button a {
   font-style: none;
   text-decoration: none;
   color: #FFF;
+}
+.presentation-restaurant__button a {
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
 
 /*----------------------------------------Layout--------------------------------------------------*/
@@ -378,6 +389,7 @@ body {
   text-decoration: none;
   color: #131313;
   position: relative;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
 .restaurants .article__cardMenu {
   position: absolute;
@@ -430,7 +442,6 @@ body {
 .footer {
   background-color: #434343;
   padding: 30px 0 50px 20px;
-  max-width: 1900px;
 }
 .footer__logo {
   font-family: "Shrikhand";
@@ -477,6 +488,7 @@ body {
   text-decoration: none;
   color: #FFF;
   font-size: 1.8rem;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
 
 /*---------------------------------header restaurants--------------------------*/
@@ -503,6 +515,10 @@ body {
   color: #131313;
   font-size: 20px;
 }
+.header-restaurants__photo {
+  width: 200px;
+}
+
 /*--------------------------------Main restaurants-------------------------------------*/
 .principal-img {
   padding-top: 15px;
@@ -549,8 +565,47 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__heading {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+.presentation-restaurant__heading i {
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__heading i {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 .presentation-restaurant .card {
   padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant .card {
+    width: 47.619047619%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .presentation-restaurant .card {
+    width: 30.303030303%;
+  }
 }
 .presentation-restaurant .card__heading {
   text-transform: uppercase;
@@ -559,11 +614,12 @@ body {
   position: relative;
   padding-bottom: 5px;
   font-size: 1.8rem;
+  width: 60px;
 }
 .presentation-restaurant .card__heading::after {
   position: absolute;
   content: "";
-  width: 12%;
+  width: 75%;
   height: 3px;
   background-color: #99E2D0;
   bottom: 0;
@@ -576,6 +632,21 @@ body {
           box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
   border-radius: 10px;
   padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .presentation-restaurant .card__plats {
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .presentation-restaurant .card__plats__heading {
   font-size: 1.8rem;
@@ -595,3 +666,42 @@ body {
 }
 
 /*-----------------------------------------Pages elements--------------------------------------------*/
+/*--------------------------------Photo la note enchantee------------------*/
+.principal-img__photo--lne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+/*------------------------------Photo a la francaise-------------------------------*/
+.principal-img__photo--alf {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+
+/*--------------------------------Photo la note enchantee------------------*/
+.principal-img__photo--lne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+/*--------------------------------Photo le delice des sens------------------*/
+.principal-img__photo--dds {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
+}

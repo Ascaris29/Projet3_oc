@@ -3,13 +3,22 @@
 .presentation{
     &__button{
         @include basic-button;
+        @include cursor-hand;
+        a{
+            @include cursor-hand;
+        }
     }
 }
 
 .presentation-restaurant{
     &__button{
        @include basic-button;
+       @include cursor-hand;
        padding:15px 40px;
        margin-top:40px;
+       a{
+           @include cursor-hand;
+       }
+
     }
 }

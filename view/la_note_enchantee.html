@@ -5,35 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Commandez des plats délicieux avec La note enchantée">
-        <link rel="stylesheet" type="text/css" href="public/assets/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="public/assets/css/mobile.css">
-        <link rel="stylesheet" type="text/css" href="public/assets/css/tablet.css">
-        <link rel="stylesheet" type="text/css" href="public/assets/css/desktop.css">
+        <link rel="stylesheet" type="text/css" href="../public/assets/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../public/assets/css/main.css">
         <script src="https://kit.fontawesome.com/e65359aae8.js" crossorigin="anonymous"></script>
         <title>Oh My Food - La note enchantée</title>
     </head>
 <body>
-    <header>
-        <div class="header__arrow">
-            <a href="../index.html"><i class="fa-solid fa-arrow-left header__icon"></i></a>
+    <header class="header-restaurants">
+        <div class="header-restaurants__arrow">
+            <a href="../index.html"><i class="fa-solid fa-arrow-left header-restaurants__icon"></i></a>
         </div>
-        <div class="header__logo">
-            <img src="../public/images/logo/ohmyfood.png" alt="logo du site ohmyfood" class="header__photo" width="200">
+        <div class="header-restaurants__logo">
+            <img src="../public/images/logo/ohmyfood.png" alt="logo du site ohmyfood" class="header-restaurants__photo">
         </div>
     </header>
     <main>
         <section class="principal-img">
             <div class="principal-img__img">
-                <img src="../public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image du restaurant en gros plan" class="principal-img__photo" width="300">
+                <img src="../public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image du restaurant en gros plan" class="principal-img__photo--lne">
             </div>
         </section>
         <section class="presentation-restaurant">
             <h2 class="presentation-restaurant__heading">
                 La note enchantée
-            </h2>
-            <div class="presentation-restaurant__heart">
                 <i class="fa-regular fa-heart"></i>
-            </div>
+            </h2>
+            <div class="presentation-restaurant__bloc">
                 <article class="card presentation-restaurant__card">
                     <h3 class="card__heading">
                         Entrées
@@ -179,18 +176,22 @@
                         </div>
                     </div>
                 </article>
+            </div>
+            <button class="presentation-restaurant__button">
+                <a href="#">Commander</a>
+            </button>      
         </section>
     </main>
-    <footer>
-        <div class="footer__logo">
-            <img src="../public/images/logo/ohmyfood.png" alt="Logo du site" class="footer__img" width="100">
-            <ul class="footer__list">
-                <li class="footer__items"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-                <li class="footer__items"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-                <li class="footer__items"><a href="#">Mentions légales</a></li>
-                <li class="footer__items"><a href="mailto:ohmyfood@mail.com">Contact</a></li>
-            </ul>
-        </div>
+    <footer class="footer">
+        <h2 class="footer__logo">
+            Ohmyfood
+        </h2>
+        <ul class="footer__list">
+            <li class="footer__items"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+            <li class="footer__items"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+            <li class="footer__items"><a href="#">Mentions légales</a></li>
+            <li class="footer__items"><a href="mailto:ohmyfood@mail.com">Contact</a></li>
+        </ul>
     </footer>
 </body>
 </html>
