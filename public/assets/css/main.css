@@ -492,6 +492,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+  position: relative;
+}
+.header-restaurants__arrow {
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
 }
 .header-restaurants__arrow i {
   color: #131313;
@@ -500,10 +506,21 @@ body {
 /*--------------------------------Main restaurants-------------------------------------*/
 .principal-img {
   padding-top: 15px;
-  height: 215px;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .principal-img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .principal-img {
+    height: 400px;
+  }
 }
 .principal-img__img {
   width: 100%;
+  height: 100%;
 }
 .principal-img__photo {
   width: 100%;
@@ -515,7 +532,7 @@ body {
 .presentation-restaurant {
   background-color: #FFF;
   position: relative;
-  top: -30px;
+  top: -25px;
   border-radius: 30px;
   padding: 30px 20px;
 }

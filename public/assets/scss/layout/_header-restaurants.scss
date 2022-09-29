@@ -5,7 +5,11 @@
     align-items:center;
     justify-content:center;
     gap:20px;
+    position:relative;
     &__arrow{
+        position:absolute;
+        left:0;
+        margin-left:20px;
        i{
            color:$black;
            font-size:20px;
