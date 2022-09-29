@@ -1,3 +1,4 @@
+/*---------------------------------------- Utils------------------------------------------------*/
 /*--------------------Color css----------------------*/
 /*--------------------Font family---------------------*/
 /*----------------------Font weight--------------------*/
@@ -5,7 +6,7 @@
 /*---------------------padding-------------------------*/
 /*------------------box-shadow----------------------*/
 /*-----------------------------Fond background----------------------------*/
-/*-----------------------------max-width---------------------------------*/
+/*----------------------------------------Base---------------------------------------------------*/
 /*----------------------Import font------------------------*/
 @import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -23,10 +24,10 @@ html {
 }
 
 body {
-  margin: 0 auto;
   font-family: "Roboto";
 }
 
+/*---------------------------------------Components---------------------------------------------*/
 /*----------------------Button presentation-------------------*/
 .presentation__button {
   display: block;
@@ -34,25 +35,59 @@ body {
   border-radius: 50px;
   font-size: 1.8rem;
   border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  cursor: pointer;
+  background: linear-gradient(150deg, #FF79DA 5%, 30%, #9356DC 65%);
   color: #FFF;
   max-width: 1400px;
   margin: auto;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+.presentation__button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(#ff88de, #9b63df);
 }
 .presentation__button a {
   font-style: none;
   text-decoration: none;
   color: #FFF;
 }
+.presentation__button a {
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
 
-header {
+.presentation-restaurant__button {
+  display: block;
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  border: none;
+  background: linear-gradient(150deg, #FF79DA 5%, 30%, #9356DC 65%);
+  color: #FFF;
+  max-width: 1400px;
+  margin: auto;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+  padding: 15px 40px;
+  margin-top: 40px;
+}
+.presentation-restaurant__button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(#ff88de, #9b63df);
+}
+.presentation-restaurant__button a {
+  font-style: none;
+  text-decoration: none;
+  color: #FFF;
+}
+.presentation-restaurant__button a {
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+
+/*----------------------------------------Layout--------------------------------------------------*/
+.header-accueil {
   padding-top: 30px;
   max-width: 1400px;
   margin: auto;
 }
-header .header__logo {
+.header-accueil__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,13 +96,16 @@ header .header__logo {
           justify-content: center;
 }
 @media screen and (min-width: 1024px) {
-  header .header__logo {
+  .header-accueil__logo {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-left: 20px;
     padding-top: 40px;
   }
+}
+.header-accueil__photo {
+  width: 200px;
 }
 
 .presentation {
@@ -91,6 +129,7 @@ header .header__logo {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
   }
 }
 .presentation .form {
@@ -109,9 +148,17 @@ header .header__logo {
 @media screen and (min-width: 1024px) {
   .presentation .form {
     background-color: transparent;
-    display: block;
-    text-align: right;
     color: #FFF;
+    border: 1px solid #FFF;
+    padding: 5px;
+    width: 200px;
+    position: absolute;
+    right: 4%;
+    top: 6%;
+    border-radius: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .presentation .form__textarea {
@@ -159,10 +206,10 @@ header .header__logo {
 }
 .presentation .form__icon {
   display: inline-block;
-  margin-right: 10px;
 }
 .presentation .form__i {
   font-size: 20px;
+  margin-left: 20px;
 }
 .presentation__container {
   background-color: #fafafa;
@@ -173,7 +220,8 @@ header .header__logo {
   .presentation__container {
     padding-left: 20px;
     background: transparent;
-    padding-bottom: 0;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 .presentation__heading {
@@ -206,7 +254,7 @@ header .header__logo {
 }
 
 .fonctionnement {
-  padding: 60px 20px;
+  padding: 60px 40px 20px 40px;
 }
 .fonctionnement__heading {
   font-size: 2.5rem;
@@ -251,13 +299,14 @@ header .header__logo {
   font-size: 1.8rem;
   border-radius: 20px;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  padding-left: 40px;
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement .article {
@@ -271,13 +320,16 @@ header .header__logo {
   color: #FFF;
   padding: 5px 12px;
   position: absolute;
-  left: -10px;
+  left: -17px;
 }
 .fonctionnement .article__icon {
   color: #797979;
 }
 .fonctionnement .article__icon--purple {
   color: #9356DC;
+}
+.fonctionnement .article__icon i {
+  font-size: 22px;
 }
 
 .restaurants {
@@ -337,11 +389,12 @@ header .header__logo {
   text-decoration: none;
   color: #131313;
   position: relative;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
 .restaurants .article__cardMenu {
   position: absolute;
-  right: 1%;
-  top: 5%;
+  right: 4%;
+  top: 4%;
   background-color: #99E2D0;
   padding: 5px 10px;
   font-size: 1.2rem;
@@ -378,17 +431,17 @@ header .header__logo {
   padding: 0 10px 0 20px;
 }
 .restaurants .article__city {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 .restaurants .article__heart i {
   font-size: 30px;
 }
 
+/*---------------------------------------- Page restaurants----------------------------------------*/
 .footer {
   background-color: #434343;
   padding: 30px 0 50px 20px;
-  max-width: 1900px;
 }
 .footer__logo {
   font-family: "Shrikhand";
@@ -422,7 +475,7 @@ header .header__logo {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 50px 20px 0 20px;
+    padding: 30px 20px 0 20px;
   }
 }
 .footer__items {
@@ -435,4 +488,220 @@ header .header__logo {
   text-decoration: none;
   color: #FFF;
   font-size: 1.8rem;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+
+/*---------------------------------header restaurants--------------------------*/
+.header-restaurants {
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+.header-restaurants__arrow {
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
+}
+.header-restaurants__arrow i {
+  color: #131313;
+  font-size: 20px;
+}
+.header-restaurants__photo {
+  width: 200px;
+}
+
+/*--------------------------------Main restaurants-------------------------------------*/
+.principal-img {
+  padding-top: 15px;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .principal-img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .principal-img {
+    height: 400px;
+  }
+}
+.principal-img__img {
+  width: 100%;
+  height: 100%;
+}
+.principal-img__photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.presentation-restaurant {
+  background-color: #FFF;
+  position: relative;
+  top: -25px;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+.presentation-restaurant__heading {
+  font-family: "Shrikhand";
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__heading {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+.presentation-restaurant__heading i {
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__heading i {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+.presentation-restaurant .card {
+  padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant .card {
+    width: 47.619047619%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .presentation-restaurant .card {
+    width: 30.303030303%;
+  }
+}
+.presentation-restaurant .card__heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+  width: 60px;
+}
+.presentation-restaurant .card__heading::after {
+  position: absolute;
+  content: "";
+  width: 75%;
+  height: 3px;
+  background-color: #99E2D0;
+  bottom: 0;
+  left: 0;
+}
+.presentation-restaurant .card__plats {
+  height: 65px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .presentation-restaurant .card__plats {
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.presentation-restaurant .card__plats__heading {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.presentation-restaurant .card__plats__description {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.presentation-restaurant .card__plats__acc {
+  font-weight: 300;
+}
+
+/*-----------------------------------------Pages elements--------------------------------------------*/
+/*--------------------------------Photo la note enchantee------------------*/
+.principal-img__photo--lne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+/*------------------------------Photo a la francaise-------------------------------*/
+.principal-img__photo--alf {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+
+/*--------------------------------Photo la note enchantee------------------*/
+.principal-img__photo--lne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+/*--------------------------------Photo le delice des sens------------------*/
+.principal-img__photo--dds {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
 }

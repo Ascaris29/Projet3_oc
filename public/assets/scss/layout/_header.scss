@@ -1,7 +1,7 @@
-header{
+.header-accueil{
     padding-top:30px;
     @include max-width;
-   .header__logo{
+   &__logo{
        display:flex;
        justify-content:center;
        @include responsive-desktop{
@@ -9,5 +9,8 @@ header{
            padding-left:20px;
            padding-top:40px;
        }
+   }
+   &__photo{
+    width:200px;
    }
 }

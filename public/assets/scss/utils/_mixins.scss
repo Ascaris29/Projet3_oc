@@ -13,3 +13,37 @@
     max-width:1400px;
     margin:auto;
 }
+
+@mixin background-button{
+    background:linear-gradient(150deg, $color-secondary 5%, 30%, $color-primary 65%);
+}
+
+@mixin basic-button{
+        display:block;
+        padding:20px;
+        border-radius:50px;  
+        font-size: $size-text;
+        border:none;
+        @include background-button;
+        color:$white;
+        &:hover{
+            background:linear-gradient($light-secondary, $light-primary);
+        }
+        @include max-width;
+        @include responsive-desktop{
+        }
+        a{
+            font-style:none;
+            text-decoration: none;
+            color:$white;
+        }
+}
+
+
+@mixin cursor-hand{
+    cursor:url("../../images/icones/cursor-hand.svg"), pointer;      
+}
+
+@mixin light-secondary{
+
+}

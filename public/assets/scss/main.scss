@@ -1,17 +1,26 @@
+
+/*---------------------------------------- Utils------------------------------------------------*/
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
 
-
+/*----------------------------------------Base---------------------------------------------------*/
 @import "./base/base";
 
-
+/*---------------------------------------Components---------------------------------------------*/
 @import "./components/buttons";
 
+/*----------------------------------------Layout--------------------------------------------------*/
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/main";
 @import "./layout/footer";
+@import "./layout/header-restaurants";
+@import "./layout/main-restaurants";
 
 
-
+/*-----------------------------------------Pages elements--------------------------------------------*/
+@import "./pages/lapalettedugout";
+@import "./pages/alafrancaise";
+@import "./pages/lanoteenchantee";
+@import "./pages/ledelicedessens";
