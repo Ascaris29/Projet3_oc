@@ -14,8 +14,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -34,7 +33,6 @@ body {
   border-radius: 50px;
   font-size: 1.8rem;
   border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   color: #FFF;
@@ -47,30 +45,21 @@ body {
   color: #FFF;
 }
 
-.header-accueil {
+header {
   padding-top: 30px;
   max-width: 1400px;
   margin: auto;
 }
-.header-accueil__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header .header__logo {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media screen and (min-width: 1024px) {
-  .header-accueil__logo {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  header .header__logo {
+    justify-content: space-between;
     padding-left: 20px;
     padding-top: 40px;
   }
-}
-.header-accueil__photo {
-  width: 200px;
 }
 
 .presentation {
@@ -84,46 +73,24 @@ body {
     margin-top: 30px;
     padding: 0;
     height: 500px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .presentation .form {
   background-color: #f2f2f2;
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 1024px) {
   .presentation .form {
     background-color: transparent;
+    display: block;
+    text-align: right;
     color: #FFF;
-    border: 1px solid #FFF;
-    padding: 5px;
-    width: 200px;
-    position: absolute;
-    right: 4%;
-    top: 6%;
-    border-radius: 20px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 .presentation .form__textarea {
@@ -137,44 +104,20 @@ body {
     margin-right: 20px;
   }
 }
-.presentation .form__textarea::-webkit-input-placeholder {
-  color: #131313;
-}
-.presentation .form__textarea::-moz-placeholder {
-  color: #131313;
-}
-.presentation .form__textarea:-ms-input-placeholder {
-  color: #131313;
-}
-.presentation .form__textarea::-ms-input-placeholder {
-  color: #131313;
-}
 .presentation .form__textarea::placeholder {
   color: #131313;
 }
 @media screen and (min-width: 1024px) {
-  .presentation .form__textarea::-webkit-input-placeholder {
-    color: #FFF;
-  }
-  .presentation .form__textarea::-moz-placeholder {
-    color: #FFF;
-  }
-  .presentation .form__textarea:-ms-input-placeholder {
-    color: #FFF;
-  }
-  .presentation .form__textarea::-ms-input-placeholder {
-    color: #FFF;
-  }
   .presentation .form__textarea::placeholder {
     color: #FFF;
   }
 }
 .presentation .form__icon {
   display: inline-block;
+  margin-right: 10px;
 }
 .presentation .form__i {
   font-size: 20px;
-  margin-left: 20px;
 }
 .presentation__container {
   background-color: #fafafa;
@@ -218,7 +161,7 @@ body {
 }
 
 .fonctionnement {
-  padding: 60px 40px 20px 40px;
+  padding: 60px 20px;
 }
 .fonctionnement__heading {
   font-size: 2.5rem;
@@ -230,47 +173,29 @@ body {
 }
 .fonctionnement__bloc {
   padding: 60px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 30px;
   max-width: 1400px;
   margin: auto;
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement__bloc {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .fonctionnement .article {
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
   display: flex;
   gap: 20px;
   height: 70px;
   font-size: 1.8rem;
   border-radius: 20px;
   position: relative;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  padding-left: 40px;
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement .article {
@@ -284,16 +209,13 @@ body {
   color: #FFF;
   padding: 5px 12px;
   position: absolute;
-  left: -17px;
+  left: -10px;
 }
 .fonctionnement .article__icon {
   color: #797979;
 }
 .fonctionnement .article__icon--purple {
   color: #9356DC;
-}
-.fonctionnement .article__icon i {
-  font-size: 22px;
 }
 
 .restaurants {
@@ -307,34 +229,22 @@ body {
   margin: auto;
 }
 .restaurants__bloc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 30px;
   max-width: 1400px;
   margin: auto;
 }
 @media screen and (min-width: 1024px) {
   .restaurants__bloc {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 .restaurants .article {
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
 }
 @media screen and (min-width: 1024px) {
   .restaurants .article {
@@ -342,13 +252,8 @@ body {
   }
 }
 .restaurants .article a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 250px;
   text-decoration: none;
   color: #131313;
@@ -356,8 +261,8 @@ body {
 }
 .restaurants .article__cardMenu {
   position: absolute;
-  right: 4%;
-  top: 4%;
+  right: 1%;
+  top: 5%;
   background-color: #99E2D0;
   padding: 5px 10px;
   font-size: 1.2rem;
@@ -371,21 +276,14 @@ body {
 .restaurants .article__photo {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px 20px 0px 0;
 }
 .restaurants .article__description {
   padding: 15px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 .restaurants .article__heading {
   font-size: 1.8rem;
@@ -394,7 +292,7 @@ body {
   padding: 0 10px 0 20px;
 }
 .restaurants .article__city {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
 }
 .restaurants .article__heart i {
@@ -417,13 +315,8 @@ body {
   }
 }
 .footer__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   list-style-type: none;
   padding-top: 15px;
   max-width: 1400px;
@@ -431,14 +324,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 30px 20px 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 20px 0 20px;
   }
 }
 .footer__items {
@@ -455,15 +343,9 @@ body {
 
 .header {
   padding-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .header__arrow i {
@@ -477,8 +359,7 @@ body {
 .principal-img__photo {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .presentation-restaurant {
@@ -491,15 +372,9 @@ body {
 .presentation-restaurant__heading {
   font-family: "Shrikhand";
   font-size: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 .presentation-restaurant .card {
   padding-top: 40px;
@@ -516,3 +391,5 @@ body {
   width: 100%;
   height: 10px;
 }
+
+/*# sourceMappingURL=lapalettedugout.css.map */

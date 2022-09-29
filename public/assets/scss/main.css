@@ -41,18 +41,20 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 .presentation__button a {
   font-style: none;
   text-decoration: none;
   color: #FFF;
 }
 
-.header-accueil {
+header {
   padding-top: 30px;
   max-width: 1400px;
   margin: auto;
 }
-.header-accueil__logo {
+
+header .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,8 +62,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 @media screen and (min-width: 1024px) {
-  .header-accueil__logo {
+  header .header__logo {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -69,13 +72,11 @@ body {
     padding-top: 40px;
   }
 }
-.header-accueil__photo {
-  width: 200px;
-}
 
 .presentation {
   padding-top: 20px;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation {
     background: url("../../images/restaurants/presentation_img.jpg");
@@ -94,9 +95,9 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    position: relative;
   }
 }
+
 .presentation .form {
   background-color: #f2f2f2;
   height: 60px;
@@ -110,53 +111,47 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation .form {
     background-color: transparent;
+    display: block;
+    text-align: right;
     color: #FFF;
-    border: 1px solid #FFF;
-    padding: 5px;
-    width: 200px;
-    position: absolute;
-    right: 4%;
-    top: 6%;
-    border-radius: 20px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
+
 .presentation .form__textarea {
   border: none;
   background-color: transparent;
   text-align: center;
   font-size: 17px;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea {
     margin-right: 20px;
   }
 }
+
 .presentation .form__textarea::-webkit-input-placeholder {
   color: #131313;
 }
-.presentation .form__textarea::-moz-placeholder {
-  color: #131313;
-}
+
 .presentation .form__textarea:-ms-input-placeholder {
   color: #131313;
 }
+
 .presentation .form__textarea::-ms-input-placeholder {
   color: #131313;
 }
+
 .presentation .form__textarea::placeholder {
   color: #131313;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea::-webkit-input-placeholder {
-    color: #FFF;
-  }
-  .presentation .form__textarea::-moz-placeholder {
     color: #FFF;
   }
   .presentation .form__textarea:-ms-input-placeholder {
@@ -169,18 +164,22 @@ body {
     color: #FFF;
   }
 }
+
 .presentation .form__icon {
   display: inline-block;
+  margin-right: 10px;
 }
+
 .presentation .form__i {
   font-size: 20px;
-  margin-left: 20px;
 }
+
 .presentation__container {
   background-color: #fafafa;
   padding-bottom: 60px;
   position: relative;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation__container {
     padding-left: 20px;
@@ -188,6 +187,7 @@ body {
     padding-bottom: 0;
   }
 }
+
 .presentation__heading {
   padding: 50px 40px 10px 30px;
   font-size: 2.5rem;
@@ -196,12 +196,14 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation__heading {
     padding-left: 0;
     color: #FFF;
   }
 }
+
 .presentation__text {
   padding: 0 30px 30px;
   text-align: center;
@@ -210,6 +212,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation__text {
     padding-left: 0;
@@ -218,16 +221,19 @@ body {
 }
 
 .fonctionnement {
-  padding: 60px 40px 20px 40px;
+  padding: 60px 20px;
 }
+
 .fonctionnement__heading {
   font-size: 2.5rem;
   max-width: 1400px;
   margin: auto;
 }
+
 .fonctionnement__article--lila {
   background-color: #f2eafb;
 }
+
 .fonctionnement__bloc {
   padding: 60px 0;
   display: -webkit-box;
@@ -241,6 +247,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .fonctionnement__bloc {
     -webkit-box-orient: horizontal;
@@ -252,9 +259,10 @@ body {
             justify-content: space-between;
   }
 }
+
 .fonctionnement .article {
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,49 +271,51 @@ body {
   font-size: 1.8rem;
   border-radius: 20px;
   position: relative;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding-left: 40px;
 }
+
 @media screen and (min-width: 1024px) {
   .fonctionnement .article {
-    width: 33.3333333333%;
+    width: calc(100%/3);
     gap: 30px;
   }
 }
+
 .fonctionnement .article__number {
   border-radius: 50px;
   background-color: #9356DC;
   color: #FFF;
   padding: 5px 12px;
   position: absolute;
-  left: -17px;
+  left: -10px;
 }
+
 .fonctionnement .article__icon {
   color: #797979;
 }
+
 .fonctionnement .article__icon--purple {
   color: #9356DC;
-}
-.fonctionnement .article__icon i {
-  font-size: 22px;
 }
 
 .restaurants {
   padding: 60px 20px;
   background-color: #fafafa;
 }
+
 .restaurants__heading {
   font-size: 2.5rem;
   padding-bottom: 20px;
   max-width: 1400px;
   margin: auto;
 }
+
 .restaurants__bloc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,6 +328,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .restaurants__bloc {
     -webkit-box-orient: horizontal;
@@ -331,16 +342,19 @@ body {
             justify-content: space-between;
   }
 }
+
 .restaurants .article {
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
 }
+
 @media screen and (min-width: 1024px) {
   .restaurants .article {
     width: 22%;
   }
 }
+
 .restaurants .article a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,20 +368,23 @@ body {
   color: #131313;
   position: relative;
 }
+
 .restaurants .article__cardMenu {
   position: absolute;
-  right: 4%;
-  top: 4%;
+  right: 1%;
+  top: 5%;
   background-color: #99E2D0;
   padding: 5px 10px;
   font-size: 1.2rem;
   color: #278870;
   border-radius: 2px;
 }
+
 .restaurants .article__img {
   width: 100%;
   height: 70%;
 }
+
 .restaurants .article__photo {
   width: 100%;
   height: 100%;
@@ -375,6 +392,7 @@ body {
      object-fit: cover;
   border-radius: 20px 20px 0px 0;
 }
+
 .restaurants .article__description {
   padding: 15px 10px;
   display: -webkit-box;
@@ -387,16 +405,20 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .restaurants .article__heading {
   font-size: 1.8rem;
 }
+
 .restaurants .article__heart {
   padding: 0 10px 0 20px;
 }
+
 .restaurants .article__city {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
 }
+
 .restaurants .article__heart i {
   font-size: 30px;
 }
@@ -406,16 +428,19 @@ body {
   padding: 30px 0 50px 20px;
   max-width: 1900px;
 }
+
 .footer__logo {
   font-family: "Shrikhand";
   color: #FFF;
   font-size: 2rem;
 }
+
 @media screen and (min-width: 768px) {
   .footer__logo {
     text-align: center;
   }
 }
+
 .footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,6 +454,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 768px) {
   .footer__list {
     -webkit-box-orient: horizontal;
@@ -438,15 +464,18 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 30px 20px 0 20px;
+    padding: 50px 20px 0 20px;
   }
 }
+
 .footer__items {
   padding-top: 10px;
 }
+
 .footer__items i {
   margin-right: 10px;
 }
+
 .footer__items a {
   text-decoration: none;
   color: #FFF;
@@ -466,14 +495,17 @@ body {
           justify-content: center;
   gap: 20px;
 }
+
 .header__arrow i {
   color: #131313;
   font-size: 20px;
 }
+
 .principal-img {
   padding-top: 15px;
   height: 215px;
 }
+
 .principal-img__photo {
   width: 100%;
   height: 100%;
@@ -488,6 +520,7 @@ body {
   border-radius: 30px;
   padding: 30px 20px;
 }
+
 .presentation-restaurant__heading {
   font-family: "Shrikhand";
   font-size: 2.5rem;
@@ -501,18 +534,22 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .presentation-restaurant .card {
   padding-top: 40px;
 }
+
 .presentation-restaurant .card__heading {
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 300;
   position: relative;
 }
+
 .presentation-restaurant .card__heading::after {
   position: absolute;
   content: "";
   width: 100%;
   height: 10px;
 }
+/*# sourceMappingURL=main.css.map */

@@ -341,4 +341,55 @@ header .header__logo {
   font-size: 1.8rem;
 }
 
+.header {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.header__arrow i {
+  color: #131313;
+  font-size: 20px;
+}
+.principal-img {
+  padding-top: 15px;
+  height: 215px;
+}
+.principal-img__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presentation-restaurant {
+  background-color: #FFF;
+  position: relative;
+  top: -30px;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+.presentation-restaurant__heading {
+  font-family: "Shrikhand";
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.presentation-restaurant .card {
+  padding-top: 40px;
+}
+.presentation-restaurant .card__heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 300;
+  position: relative;
+}
+.presentation-restaurant .card__heading::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+}
+
 /*# sourceMappingURL=mobile.css.map */
