@@ -13,3 +13,22 @@
     max-width:1400px;
     margin:auto;
 }
+
+@mixin basic-button{
+    display:block;
+        padding:20px;
+        border-radius:50px;  
+        font-size: $size-text;
+        border:none;
+        background:linear-gradient($color-secondary, $color-primary);
+        cursor:pointer;
+        color:$white;
+        @include max-width;
+        @include responsive-desktop{
+        }
+        a{
+            font-style:none;
+            text-decoration: none;
+            color:$white;
+        }
+}

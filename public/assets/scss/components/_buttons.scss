@@ -2,22 +2,14 @@
 
 .presentation{
     &__button{
-        display:block;
-        padding:20px;
-        border-radius:50px;  
-        font-size: $size-text;
-        border:none;
-        background:linear-gradient($color-secondary, $color-primary);
-        cursor:pointer;
-        color:$white;
-        @include max-width;
-        @include responsive-desktop{
-            
-        }
-        a{
-            font-style:none;
-            text-decoration: none;
-            color:$white;
-        }
+        @include basic-button;
+    }
+}
+
+.presentation-restaurant{
+    &__button{
+       @include basic-button;
+       padding:15px 40px;
+       margin-top:40px;
     }
 }

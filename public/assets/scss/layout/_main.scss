@@ -62,7 +62,8 @@
         @include responsive-desktop{
             padding-left:20px;
             background:transparent;
-            padding-bottom:0;
+            padding-bottom:20px;
+            background-color:rgba(0,0,0,.5);
         }
     }
     &__heading{
@@ -225,3 +226,7 @@
            
     }
 }
+
+
+/*---------------------------------------- Page restaurants----------------------------------------*/ 
+
