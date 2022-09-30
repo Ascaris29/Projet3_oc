@@ -51,6 +51,7 @@
             @include max-width;
         }
     }
+}
     .card{
         padding-top:40px;
         @include responsive-tablet{
@@ -76,18 +77,31 @@
                 bottom:0;
                 left:0;
             }
+
         }
+   
+      
         &__plats{
             height:65px;
             margin-top:15px;
             box-shadow: $shadow;
-            border-radius:10px;
-            padding:10px 10px;
+            border-radius:20px;
+            /*padding:10px 10px;*/
             display:flex;
-            flex-direction:column;
+            position:relative;
+            align-items:center;
+            @include cursor-hand;
+            &:hover .card__plats__valid{
+                display:block;
+            }
             @include responsive-desktop{
                 height:80px;
                 justify-content: space-between;
+            }
+            &__txt{
+                display:flex;
+                flex-direction:column;
+                width:100%;
             }
             &__heading{
                 font-size:$size-text;
@@ -102,6 +116,13 @@
             &__acc{
                 font-weight:$font-light;
             }
+            &__valid{
+                /*display:none;*/
+                padding:25px;
+                background-color:$color-tertiary;
+                height:100%;
+                border-radius:0 20px 20px 0;
+            
+            }
         }
     }
-}

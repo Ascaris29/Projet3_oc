@@ -594,20 +594,21 @@ body {
     margin: auto;
   }
 }
-.presentation-restaurant .card {
+
+.card {
   padding-top: 40px;
 }
 @media screen and (min-width: 768px) {
-  .presentation-restaurant .card {
+  .card {
     width: 47.619047619%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .presentation-restaurant .card {
+  .card {
     width: 30.303030303%;
   }
 }
-.presentation-restaurant .card__heading {
+.card__heading {
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 300;
@@ -616,7 +617,7 @@ body {
   font-size: 1.8rem;
   width: 60px;
 }
-.presentation-restaurant .card__heading::after {
+.card__heading::after {
   position: absolute;
   content: "";
   width: 75%;
@@ -625,13 +626,34 @@ body {
   bottom: 0;
   left: 0;
 }
-.presentation-restaurant .card__plats {
+.card__plats {
   height: 65px;
   margin-top: 15px;
   -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
           box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-  border-radius: 10px;
-  padding: 10px 10px;
+  border-radius: 20px;
+  /*padding:10px 10px;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+.card__plats:hover .card__plats__valid {
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  .card__plats {
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.card__plats__txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,20 +661,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
-@media screen and (min-width: 1024px) {
-  .presentation-restaurant .card__plats {
-    height: 80px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-.presentation-restaurant .card__plats__heading {
+.card__plats__heading {
   font-size: 1.8rem;
   font-weight: 400;
 }
-.presentation-restaurant .card__plats__description {
+.card__plats__description {
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,8 +676,15 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.presentation-restaurant .card__plats__acc {
+.card__plats__acc {
   font-weight: 300;
+}
+.card__plats__valid {
+  /*display:none;*/
+  padding: 25px;
+  background-color: #99E2D0;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
 }
 
 /*-----------------------------------------Pages elements--------------------------------------------*/
