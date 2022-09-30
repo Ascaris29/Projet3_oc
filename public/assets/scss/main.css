@@ -41,15 +41,18 @@ body {
   margin: auto;
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
+
 .presentation__button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
   background: linear-gradient(#ff88de, #9b63df);
 }
+
 .presentation__button a {
   font-style: none;
   text-decoration: none;
   color: #FFF;
 }
+
 .presentation__button a {
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
@@ -68,15 +71,18 @@ body {
   padding: 15px 40px;
   margin-top: 40px;
 }
+
 .presentation-restaurant__button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
   background: linear-gradient(#ff88de, #9b63df);
 }
+
 .presentation-restaurant__button a {
   font-style: none;
   text-decoration: none;
   color: #FFF;
 }
+
 .presentation-restaurant__button a {
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
@@ -87,6 +93,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 .header-accueil__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,6 +102,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 @media screen and (min-width: 1024px) {
   .header-accueil__logo {
     -webkit-box-pack: justify;
@@ -104,6 +112,7 @@ body {
     padding-top: 40px;
   }
 }
+
 .header-accueil__photo {
   width: 200px;
 }
@@ -111,6 +120,7 @@ body {
 .presentation {
   padding-top: 20px;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation {
     background: url("../../images/restaurants/presentation_img.jpg");
@@ -132,6 +142,7 @@ body {
     position: relative;
   }
 }
+
 .presentation .form {
   background-color: #f2f2f2;
   height: 60px;
@@ -145,6 +156,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation .form {
     background-color: transparent;
@@ -161,37 +173,38 @@ body {
             justify-content: space-between;
   }
 }
+
 .presentation .form__textarea {
   border: none;
   background-color: transparent;
   text-align: center;
   font-size: 17px;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea {
     margin-right: 20px;
   }
 }
+
 .presentation .form__textarea::-webkit-input-placeholder {
   color: #131313;
 }
-.presentation .form__textarea::-moz-placeholder {
-  color: #131313;
-}
+
 .presentation .form__textarea:-ms-input-placeholder {
   color: #131313;
 }
+
 .presentation .form__textarea::-ms-input-placeholder {
   color: #131313;
 }
+
 .presentation .form__textarea::placeholder {
   color: #131313;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea::-webkit-input-placeholder {
-    color: #FFF;
-  }
-  .presentation .form__textarea::-moz-placeholder {
     color: #FFF;
   }
   .presentation .form__textarea:-ms-input-placeholder {
@@ -204,18 +217,22 @@ body {
     color: #FFF;
   }
 }
+
 .presentation .form__icon {
   display: inline-block;
 }
+
 .presentation .form__i {
   font-size: 20px;
   margin-left: 20px;
 }
+
 .presentation__container {
   background-color: #fafafa;
   padding-bottom: 60px;
   position: relative;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation__container {
     padding-left: 20px;
@@ -224,6 +241,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+
 .presentation__heading {
   padding: 50px 40px 10px 30px;
   font-size: 2.5rem;
@@ -232,12 +250,14 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation__heading {
     padding-left: 0;
     color: #FFF;
   }
 }
+
 .presentation__text {
   padding: 0 30px 30px;
   text-align: center;
@@ -246,6 +266,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .presentation__text {
     padding-left: 0;
@@ -256,14 +277,17 @@ body {
 .fonctionnement {
   padding: 60px 40px 20px 40px;
 }
+
 .fonctionnement__heading {
   font-size: 2.5rem;
   max-width: 1400px;
   margin: auto;
 }
+
 .fonctionnement__article--lila {
   background-color: #f2eafb;
 }
+
 .fonctionnement__bloc {
   padding: 60px 0;
   display: -webkit-box;
@@ -277,6 +301,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .fonctionnement__bloc {
     -webkit-box-orient: horizontal;
@@ -288,9 +313,10 @@ body {
             justify-content: space-between;
   }
 }
+
 .fonctionnement .article {
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,12 +334,14 @@ body {
   position: relative;
   padding-left: 40px;
 }
+
 @media screen and (min-width: 1024px) {
   .fonctionnement .article {
-    width: 33.3333333333%;
+    width: calc(100%/3);
     gap: 30px;
   }
 }
+
 .fonctionnement .article__number {
   border-radius: 50px;
   background-color: #9356DC;
@@ -322,12 +350,15 @@ body {
   position: absolute;
   left: -17px;
 }
+
 .fonctionnement .article__icon {
   color: #797979;
 }
+
 .fonctionnement .article__icon--purple {
   color: #9356DC;
 }
+
 .fonctionnement .article__icon i {
   font-size: 22px;
 }
@@ -336,12 +367,14 @@ body {
   padding: 60px 20px;
   background-color: #fafafa;
 }
+
 .restaurants__heading {
   font-size: 2.5rem;
   padding-bottom: 20px;
   max-width: 1400px;
   margin: auto;
 }
+
 .restaurants__bloc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,6 +387,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 1024px) {
   .restaurants__bloc {
     -webkit-box-orient: horizontal;
@@ -367,16 +401,19 @@ body {
             justify-content: space-between;
   }
 }
+
 .restaurants .article {
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
 }
+
 @media screen and (min-width: 1024px) {
   .restaurants .article {
     width: 22%;
   }
 }
+
 .restaurants .article a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,6 +428,7 @@ body {
   position: relative;
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
+
 .restaurants .article__cardMenu {
   position: absolute;
   right: 4%;
@@ -401,10 +439,12 @@ body {
   color: #278870;
   border-radius: 2px;
 }
+
 .restaurants .article__img {
   width: 100%;
   height: 70%;
 }
+
 .restaurants .article__photo {
   width: 100%;
   height: 100%;
@@ -412,6 +452,7 @@ body {
      object-fit: cover;
   border-radius: 20px 20px 0px 0;
 }
+
 .restaurants .article__description {
   padding: 15px 10px;
   display: -webkit-box;
@@ -424,16 +465,20 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .restaurants .article__heading {
   font-size: 1.8rem;
 }
+
 .restaurants .article__heart {
   padding: 0 10px 0 20px;
 }
+
 .restaurants .article__city {
   font-size: 1.6rem;
   font-weight: 300;
 }
+
 .restaurants .article__heart i {
   font-size: 30px;
 }
@@ -443,16 +488,19 @@ body {
   background-color: #434343;
   padding: 30px 0 50px 20px;
 }
+
 .footer__logo {
   font-family: "Shrikhand";
   color: #FFF;
   font-size: 2rem;
 }
+
 @media screen and (min-width: 768px) {
   .footer__logo {
     text-align: center;
   }
 }
+
 .footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -466,6 +514,7 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
 @media screen and (min-width: 768px) {
   .footer__list {
     -webkit-box-orient: horizontal;
@@ -478,12 +527,15 @@ body {
     padding: 30px 20px 0 20px;
   }
 }
+
 .footer__items {
   padding-top: 10px;
 }
+
 .footer__items i {
   margin-right: 10px;
 }
+
 .footer__items a {
   text-decoration: none;
   color: #FFF;
@@ -506,15 +558,18 @@ body {
   gap: 20px;
   position: relative;
 }
+
 .header-restaurants__arrow {
   position: absolute;
   left: 0;
   margin-left: 20px;
 }
+
 .header-restaurants__arrow i {
   color: #131313;
   font-size: 20px;
 }
+
 .header-restaurants__photo {
   width: 200px;
 }
@@ -524,20 +579,24 @@ body {
   padding-top: 15px;
   height: 250px;
 }
+
 @media screen and (min-width: 768px) {
   .principal-img {
     height: 300px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .principal-img {
     height: 400px;
   }
 }
+
 .principal-img__img {
   width: 100%;
   height: 100%;
 }
+
 .principal-img__photo {
   width: 100%;
   height: 100%;
@@ -552,6 +611,7 @@ body {
   border-radius: 30px;
   padding: 30px 20px;
 }
+
 .presentation-restaurant__heading {
   font-family: "Shrikhand";
   font-size: 2.5rem;
@@ -565,20 +625,24 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 @media screen and (min-width: 768px) {
   .presentation-restaurant__heading {
     max-width: 1400px;
     margin: auto;
   }
 }
+
 .presentation-restaurant__heading i {
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
+
 @media screen and (min-width: 768px) {
   .presentation-restaurant__heading i {
     margin-left: 20px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .presentation-restaurant__bloc {
     display: -webkit-box;
@@ -598,16 +662,19 @@ body {
 .card {
   padding-top: 40px;
 }
+
 @media screen and (min-width: 768px) {
   .card {
-    width: 47.619047619%;
+    width: calc(100%/2.1);
   }
 }
+
 @media screen and (min-width: 1024px) {
   .card {
-    width: 30.303030303%;
+    width: calc(100%/3.3);
   }
 }
+
 .card__heading {
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -617,6 +684,7 @@ body {
   font-size: 1.8rem;
   width: 60px;
 }
+
 .card__heading::after {
   position: absolute;
   content: "";
@@ -626,11 +694,12 @@ body {
   bottom: 0;
   left: 0;
 }
+
 .card__plats {
   height: 65px;
   margin-top: 15px;
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
   border-radius: 20px;
   /*padding:10px 10px;*/
   display: -webkit-box;
@@ -651,6 +720,7 @@ body {
   /*----------------------------------- hover card__plat Desktop-----------------------------*/
   /*------------------------------------- hover card__plat Tablet------------------------------------*/
 }
+
 .card__plats:active .card__plats__valid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -663,15 +733,18 @@ body {
           align-items: center;
   width: 15%;
 }
+
 .card__plats:active .card__plats__txt {
   width: 80%;
 }
+
 .card__plats:active .card__plats__acc {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 70%;
   white-space: nowrap;
 }
+
 @media screen and (min-width: 1024px) {
   .card__plats {
     height: 80px;
@@ -701,6 +774,7 @@ body {
     white-space: nowrap;
   }
 }
+
 @media screen and (min-width: 768px) {
   .card__plats {
     height: 80px;
@@ -730,6 +804,7 @@ body {
     white-space: nowrap;
   }
 }
+
 .card__plats__txt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -741,10 +816,12 @@ body {
   width: 100%;
   margin: 0 10px;
 }
+
 .card__plats__heading {
   font-size: 1.8rem;
   font-weight: 400;
 }
+
 .card__plats__description {
   font-size: 1.5rem;
   display: -webkit-box;
@@ -754,9 +831,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .card__plats__acc {
   font-weight: 300;
 }
+
 .card__plats__valid {
   display: none;
   padding: 20px;
@@ -767,10 +846,12 @@ body {
   -webkit-transition: all 1s;
   transition: all 1s;
 }
+
 .card__plats__valid:hover {
   -webkit-transform: translate(50px);
           transform: translate(50px);
 }
+
 .card__plats__valid i {
   background-color: #FFF;
   padding: 5px;
@@ -818,3 +899,4 @@ body {
   -o-object-position: 50% 65%;
      object-position: 50% 65%;
 }
+/*# sourceMappingURL=main.css.map */

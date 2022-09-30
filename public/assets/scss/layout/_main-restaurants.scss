@@ -90,18 +90,75 @@
             display:flex;
             position:relative;
             align-items:center;
+            overflow:hidden;
+            justify-content: space-between;
+            transition-delay:2s;
             @include cursor-hand;
-            &:hover .card__plats__valid{
-                display:block;
+            /*---------------------------------  click card__plat mobile-------------------------------*/
+            &:active &__valid{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                width:15%;
+                
             }
+            &:active &__txt{
+             width:80%;  
+            } 
+            &:active &__acc{
+                overflow:hidden;
+                text-overflow: ellipsis;
+                width:70%;
+                white-space: nowrap;
+                
+            }
+            /*----------------------------------- hover card__plat Desktop-----------------------------*/
             @include responsive-desktop{
                 height:80px;
                 justify-content: space-between;
+                
+                &:hover &__valid{
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    width:15%; 
+                }
+                &:hover &__txt{
+                 width:80%;  
+                } 
+                &:hover &__acc{
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    width:70%;
+                    white-space: nowrap;
+                }
+            }
+            /*------------------------------------- hover card__plat Tablet------------------------------------*/
+            @include responsive-tablet{
+                height:80px;
+                justify-content: space-between;
+                &:hover &__valid{
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    width:15%;
+                    
+                }
+                &:hover &__txt{
+                 width:80%;  
+                } 
+                &:hover &__acc{
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    width:70%;
+                    white-space: nowrap;
+                }
             }
             &__txt{
                 display:flex;
                 flex-direction:column;
                 width:100%;
+                margin:0 10px;
             }
             &__heading{
                 font-size:$size-text;
@@ -111,18 +168,28 @@
                 font-size:1.5rem;
                 display:flex;
                 justify-content:space-between;
-               
             }
             &__acc{
                 font-weight:$font-light;
             }
             &__valid{
-                /*display:none;*/
-                padding:25px;
+                display:none;
+                padding:20px;
                 background-color:$color-tertiary;
                 height:100%;
                 border-radius:0 20px 20px 0;
-            
+                overflow: hidden;
+                transition:all 1s;
+                &:hover{
+                    transform:translate(50px);
+                   
+                }
+                i{
+                    background-color:$white;
+                    padding:5px;
+                    border-radius:50px;
+                    color:$color-tertiary;
+                }
             }
         }
     }
