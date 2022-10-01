@@ -40,11 +40,14 @@ body {
   max-width: 1400px;
   margin: auto;
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
 }
 
 .presentation__button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
-  background: linear-gradient(#ff88de, #9b63df);
+  background: linear-gradient(150deg, #ff93e1 5%, 30%, #a16be0 65%);
+  -webkit-box-shadow: 0px 0px 21px -5px #42445a;
+          box-shadow: 0px 0px 21px -5px #42445a;
 }
 
 .presentation__button a {
@@ -70,11 +73,14 @@ body {
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
   padding: 15px 40px;
   margin-top: 40px;
+  -webkit-box-shadow: 0px 0px 21px -11px #42445a;
+          box-shadow: 0px 0px 21px -11px #42445a;
 }
 
 .presentation-restaurant__button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
-  background: linear-gradient(#ff88de, #9b63df);
+  background: linear-gradient(150deg, #ff93e1 5%, 30%, #a16be0 65%);
+  -webkit-box-shadow: 0px 0px 21px -5px #42445a;
+          box-shadow: 0px 0px 21px -5px #42445a;
 }
 
 .presentation-restaurant__button a {
@@ -575,6 +581,47 @@ body {
 }
 
 /*--------------------------------Main restaurants-------------------------------------*/
+@-webkit-keyframes iconrotate {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes iconrotate {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes slide-card {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+    padding: 30px;
+  }
+}
+
+@keyframes slide-card {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+    padding: 30px;
+  }
+}
+
 .principal-img {
   padding-top: 15px;
   height: 250px;
@@ -606,7 +653,6 @@ body {
 
 .presentation-restaurant {
   background-color: #FFF;
-  position: relative;
   top: -25px;
   border-radius: 30px;
   padding: 30px 20px;
@@ -633,14 +679,35 @@ body {
   }
 }
 
-.presentation-restaurant__heading i {
+.presentation-restaurant__coeur {
+  position: relative;
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
 }
 
-@media screen and (min-width: 768px) {
-  .presentation-restaurant__heading i {
-    margin-left: 20px;
-  }
+.presentation-restaurant__heart {
+  font-size: 30px;
+  opacity: 1;
+}
+
+.presentation-restaurant__heart--colored {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  background-clip: text;
+  -webkit-text-stroke: 0px;
+  color: transparent;
+}
+
+.presentation-restaurant__heart--colored:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -666,6 +733,7 @@ body {
 @media screen and (min-width: 768px) {
   .card {
     width: calc(100%/2.1);
+    /*---------------------------------------------------*/
   }
 }
 
@@ -701,7 +769,6 @@ body {
   -webkit-box-shadow: 0px 0px 21px -11px #42445a;
           box-shadow: 0px 0px 21px -11px #42445a;
   border-radius: 20px;
-  /*padding:10px 10px;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -713,8 +780,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
   /*---------------------------------  click card__plat mobile-------------------------------*/
   /*----------------------------------- hover card__plat Desktop-----------------------------*/
@@ -731,7 +796,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 15%;
+  -webkit-animation: slide-card 0.4s;
+          animation: slide-card 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .card__plats:active .card__plats__txt {
@@ -762,7 +830,17 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 15%;
+    -webkit-animation: slide-card 0.4s;
+            animation: slide-card 0.4s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+  }
+  .card__plats:hover .card__plats__valid i {
+    -webkit-animation: iconrotate 0.5s;
+            animation: iconrotate 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    padding: 5px;
   }
   .card__plats:hover .card__plats__txt {
     width: 80%;
@@ -792,16 +870,23 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 15%;
+    -webkit-animation: slide-card 0.4s;
+            animation: slide-card 0.4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .card__plats:hover .card__plats__txt {
-    width: 80%;
+    width: 70%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .card__plats:hover .card__plats__acc {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 70%;
     white-space: nowrap;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
 
@@ -838,25 +923,19 @@ body {
 
 .card__plats__valid {
   display: none;
-  padding: 20px;
   background-color: #99E2D0;
   height: 100%;
   border-radius: 0 20px 20px 0;
   overflow: hidden;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.card__plats__valid:hover {
-  -webkit-transform: translate(50px);
-          transform: translate(50px);
+  /*padding:30px;*/
 }
 
 .card__plats__valid i {
   background-color: #FFF;
-  padding: 5px;
   border-radius: 50px;
   color: #99E2D0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /*-----------------------------------------Pages elements--------------------------------------------*/

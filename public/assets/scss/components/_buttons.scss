@@ -4,6 +4,7 @@
     &__button{
         @include basic-button;
         @include cursor-hand;
+        box-shadow:$shadow;
         a{
             @include cursor-hand;
         }
@@ -16,6 +17,7 @@
        @include cursor-hand;
        padding:15px 40px;
        margin-top:40px;
+       box-shadow:$shadow;
        a{
            @include cursor-hand;
        }
