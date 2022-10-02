@@ -19,6 +19,33 @@
     }
 }
 
+@keyframes apparition{
+    0%{
+        opacity:0;
+        transform:translateY(0px);
+    }
+    20%{
+        opacity:0.2;
+        transform:translateY(-2px);
+    }
+    40%{
+        opacity:0.4;
+        transform:translateY(-4px);
+    }
+    60%{
+        opacity:0.6;
+        transform:translateY(-6px);
+    }
+    80%{
+        opacity:0.8;
+        transform:translateY(-8px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(-10px);
+    }
+}
+
 
 
 
@@ -124,11 +151,15 @@
             }
 
         }
+        &__container{
+            padding-top:20px;
+        }
    
       
         &__plats{
+            opacity:0;
             height:65px;
-            margin-top:15px;
+            margin:20px 0;
             box-shadow: $shadow;
             border-radius:20px;
             display:flex;
@@ -136,10 +167,13 @@
             align-items:center;
             overflow:hidden;
             justify-content: space-between;
-            
+            animation:apparition 0.2s;
+            animation-delay:0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
             @include cursor-hand;
           &:hover{
-           
+            transition: all 0.4s ease-in-out;
           }
             /*---------------------------------  click card__plat mobile-------------------------------*/
             &:active &__valid{
@@ -166,9 +200,9 @@
                     display:flex;
                     justify-content: center;
                     align-items:center;
-                    animation:slide-card 0.4s;
-                    animation-fill-mode:backwards;
-                   
+                    animation:slide-card 0.4s ease-out;
+                    /*animation-fill-mode:both;*/
+                    
                 }
                 &:hover &__valid i{
                   animation: iconrotate 0.5s; 
@@ -194,7 +228,7 @@
                     display:flex;
                     justify-content: center;
                     align-items:center;
-                    animation:slide-card 0.4s;
+                    animation:slide-card 0.4s ease-out;
                     animation-fill-mode:forwards;
                 }
                 &:hover &__txt{
@@ -234,7 +268,7 @@
                 border-radius:0 20px 20px 0;
                 overflow: hidden;
                 /*padding:30px;*/
-                
+                transition:all 0.5s ease-in-out;
                 &:hover{
                     
                   

@@ -6,6 +6,7 @@
 /*---------------------padding-------------------------*/
 /*------------------box-shadow----------------------*/
 /*-----------------------------Fond background----------------------------*/
+/*---------------------------------animation delay--------------------------------*/
 /*----------------------------------------Base---------------------------------------------------*/
 /*----------------------Import font------------------------*/
 @import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500;700&display=swap");
@@ -564,6 +565,70 @@ body {
     padding: 30px;
   }
 }
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    opacity: 0.2;
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  40% {
+    opacity: 0.4;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  60% {
+    opacity: 0.6;
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  80% {
+    opacity: 0.8;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    opacity: 0.2;
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  40% {
+    opacity: 0.4;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  60% {
+    opacity: 0.6;
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  80% {
+    opacity: 0.8;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
 .principal-img {
   padding-top: 15px;
   height: 250px;
@@ -690,9 +755,13 @@ body {
   bottom: 0;
   left: 0;
 }
+.card__container {
+  padding-top: 20px;
+}
 .card__plats {
+  opacity: 0;
   height: 65px;
-  margin-top: 15px;
+  margin: 20px 0;
   -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
           box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
   border-radius: 20px;
@@ -707,10 +776,22 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-animation: apparition 0.2s;
+          animation: apparition 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   cursor: url("../../images/icones/cursor-hand.svg"), pointer;
   /*---------------------------------  click card__plat mobile-------------------------------*/
   /*----------------------------------- hover card__plat Desktop-----------------------------*/
   /*------------------------------------- hover card__plat Tablet------------------------------------*/
+}
+.card__plats:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .card__plats:active .card__plats__valid {
   display: -webkit-box;
@@ -753,10 +834,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-animation: slide-card 0.4s;
-            animation: slide-card 0.4s;
-    -webkit-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;
+    -webkit-animation: slide-card 0.4s ease-out;
+            animation: slide-card 0.4s ease-out;
+    /*animation-fill-mode:both;*/
   }
   .card__plats:hover .card__plats__valid i {
     -webkit-animation: iconrotate 0.5s;
@@ -792,8 +872,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-animation: slide-card 0.4s;
-            animation: slide-card 0.4s;
+    -webkit-animation: slide-card 0.4s ease-out;
+            animation: slide-card 0.4s ease-out;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
@@ -845,6 +925,8 @@ body {
   border-radius: 0 20px 20px 0;
   overflow: hidden;
   /*padding:30px;*/
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .card__plats__valid i {
   background-color: #FFF;
