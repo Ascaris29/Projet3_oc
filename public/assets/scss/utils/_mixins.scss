@@ -27,7 +27,8 @@
         @include background-button;
         color:$white;
         &:hover{
-            background:linear-gradient($light-secondary, $light-primary);
+            background:linear-gradient(150deg, $light-secondary 5%, 30%, $light-primary 65%);
+            box-shadow: 0px 0px 21px -5px rgba(66, 68, 90, 1);
         }
         @include max-width;
         @include responsive-desktop{

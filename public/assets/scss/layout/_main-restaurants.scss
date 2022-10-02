@@ -1,4 +1,53 @@
 /*--------------------------------Main restaurants-------------------------------------*/ 
+@keyframes iconrotate{
+    from{
+        transform:rotate(90deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+ }
+
+@keyframes slide-card{
+    0% {
+        width:0;
+        
+    }
+    100%{
+        width:30px;
+        padding:30px;
+    }
+}
+
+@keyframes apparition{
+    0%{
+        opacity:0;
+        transform:translateY(0px);
+    }
+    20%{
+        opacity:0.2;
+        transform:translateY(-2px);
+    }
+    40%{
+        opacity:0.4;
+        transform:translateY(-4px);
+    }
+    60%{
+        opacity:0.6;
+        transform:translateY(-6px);
+    }
+    80%{
+        opacity:0.8;
+        transform:translateY(-8px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(-10px);
+    }
+}
+
+
+
 
 .principal-img{
     padding-top:15px;
@@ -21,7 +70,6 @@
 }
 .presentation-restaurant{
     background-color:$white;
-    position:relative;
     top:-25px;
     border-radius:30px;
     padding:30px 20px;
@@ -35,13 +83,37 @@
         @include responsive-tablet{
             @include max-width;
         }
-        i{
-            @include cursor-hand;
-            @include responsive-tablet{
-                margin-left:20px;
-            }
-        }   
+        
     }
+
+
+    &__coeur{
+        position:relative;
+        @include cursor-hand;
+    }
+    
+    &__heart{
+        font-size:30px;
+        opacity:1;
+        &--colored{
+        font-size:30px;
+        position:absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        opacity:0;
+        transition:all 0.5s ease-in-out;
+        background-image:linear-gradient($light-secondary, $light-primary);
+        background-clip:text;
+        -webkit-text-stroke:0px;
+        color:transparent;
+        &:hover{
+            opacity:1;
+        }
+        }
+    }
+    
     &__bloc{
         @include responsive-tablet{
             display:flex;
@@ -51,10 +123,11 @@
             @include max-width;
         }
     }
+}
     .card{
         padding-top:40px;
         @include responsive-tablet{
-            width:calc(100%/2.1);
+            width:calc(100%/2.1); /*---------------------------------------------------*/
         }
         @include responsive-desktop{
             width:calc(100%/3.3);
@@ -76,18 +149,105 @@
                 bottom:0;
                 left:0;
             }
+
         }
+        &__container{
+            padding-top:20px;
+        }
+   
+      
         &__plats{
+            opacity:0;
             height:65px;
-            margin-top:15px;
+            margin:20px 0;
             box-shadow: $shadow;
-            border-radius:10px;
-            padding:10px 10px;
+            border-radius:20px;
             display:flex;
-            flex-direction:column;
+            position:relative;
+            align-items:center;
+            overflow:hidden;
+            justify-content: space-between;
+            animation:apparition 0.2s;
+            animation-delay:0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            @include cursor-hand;
+          &:hover{
+            transition: all 0.4s ease-in-out;
+          }
+            /*---------------------------------  click card__plat mobile-------------------------------*/
+            &:active &__valid{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                animation:slide-card 0.4s;
+                animation-fill-mode: forwards;
+            }
+            &:active &__txt{
+             width:80%;  
+            } 
+            &:active &__acc{
+                overflow:hidden;
+                text-overflow: ellipsis;
+                width:70%;
+                white-space: nowrap;
+            }
+            /*----------------------------------- hover card__plat Desktop-----------------------------*/
             @include responsive-desktop{
                 height:80px;
                 justify-content: space-between;
+                &:hover &__valid{
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    animation:slide-card 0.4s ease-out;
+                    /*animation-fill-mode:both;*/
+                    
+                }
+                &:hover &__valid i{
+                  animation: iconrotate 0.5s; 
+                  animation-fill-mode: forwards;
+                  padding:5px;
+                }
+                &:hover &__txt{
+                 width:80%;  
+                } 
+                &:hover &__acc{
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    width:70%;
+                    white-space: nowrap;
+                }
+            }
+            /*------------------------------------- hover card__plat Tablet------------------------------------*/
+            @include responsive-tablet{
+                height:80px;
+                justify-content: space-between;
+            
+                &:hover &__valid{
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    animation:slide-card 0.4s ease-out;
+                    animation-fill-mode:forwards;
+                }
+                &:hover &__txt{
+                 width:70%;  
+                 transition:all 0.5s;
+                } 
+                &:hover &__acc{
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    width:70%;
+                    white-space: nowrap;
+                    transition:all 0.5s;
+                }
+            }
+            &__txt{
+                display:flex;
+                flex-direction:column;
+                width:100%;
+                margin:0 10px;
             }
             &__heading{
                 font-size:$size-text;
@@ -97,11 +257,33 @@
                 font-size:1.5rem;
                 display:flex;
                 justify-content:space-between;
-               
             }
             &__acc{
                 font-weight:$font-light;
             }
+            &__valid{
+                display:none;
+                background-color:$color-tertiary;
+                height:100%;
+                border-radius:0 20px 20px 0;
+                overflow: hidden;
+                /*padding:30px;*/
+                transition:all 0.5s ease-in-out;
+                &:hover{
+                    
+                  
+                }
+                i{
+                    background-color:$white;
+                    //
+                    border-radius:50px;
+                    color:$color-tertiary;
+                    transition:all 0.5s;
+                    
+                    &:hover{
+                        
+                    }
+                }
+            }
         }
     }
-}
