@@ -187,7 +187,6 @@
             text-decoration: none;
             color:$black;
             position:relative;
-            @include cursor-hand;
         }
         &__cardMenu{
             position:absolute;
@@ -218,8 +217,29 @@
         &__heading{
             font-size:$size-text;
         }
+        &__coeur{
+            position:relative;
+        }
         &__heart{
-            padding: 0 10px 0 20px;
+                font-size:30px;
+                opacity:1;
+                &--colored{
+                    font-size:30px;
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    left:0;
+                    bottom:0;
+                    opacity:0;
+                    transition:all 0.5s ease-in-out;
+                    background-image:linear-gradient($light-secondary, $light-primary);
+                    background-clip:text;
+                    -webkit-text-stroke:0px;
+                    color:transparent;
+                    &:hover{
+                        opacity:1;
+        }
+    }
         }
         &__city{
             font-size:1.6rem;

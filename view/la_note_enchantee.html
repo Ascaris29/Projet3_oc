@@ -8,7 +8,8 @@
         <link rel="stylesheet" type="text/css" href="../public/assets/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../public/assets/css/main.css">
         <script src="https://kit.fontawesome.com/e65359aae8.js" crossorigin="anonymous"></script>
-        <title>Oh My Food - La note enchantée</title>
+        <link rel="icon" type="image" href="../public/images/icones/OMF.ico">
+        <title>Restaurant La note enchantée - Oh my food</title>
     </head>
 <body>
     <header class="header-restaurants">
@@ -16,7 +17,7 @@
             <a href="../index.html"><i class="fa-solid fa-arrow-left header-restaurants__icon"></i></a>
         </div>
         <div class="header-restaurants__logo">
-            <img src="../public/images/logo/ohmyfood.png" alt="logo du site ohmyfood" class="header-restaurants__photo">
+            <a href="../index.html"><img src="../public/images/logo/ohmyfood.png" alt="logo du site ohmyfood" class="header-restaurants__photo"></a>
         </div>
     </header>
     <main>
@@ -28,83 +29,88 @@
         <section class="presentation-restaurant">
             <h2 class="presentation-restaurant__heading">
                 La note enchantée
-                <i class="fa-regular fa-heart"></i>
+                <span class="presentation-restaurant__coeur">
+                    <i class="fa-regular fa-heart presentation-restaurant__heart"></i>
+                    <i class="fa-solid fa-heart presentation-restaurant__heart--colored"></i>
+                </span>
             </h2>
             <div class="presentation-restaurant__bloc">
                 <article class="card presentation-restaurant__card">
                     <h3 class="card__heading">
                         Entrées
                     </h3>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Ravioles de foie gras
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Accompagnés de leur crème à la truffe
-                                </p>
-                                <div class="card__plats__price">
-                                    25€
-                                </div>     
+                    <div class="card__container">
+                        <div class="card__plats delai-1">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Ravioles de foie gras
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Accompagnés de leur crème à la truffe
+                                    </p>
+                                    <div class="card__plats__price">
+                                        25€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Caviar osciètre
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Sur blini à la farine de blé noir
-                                </p>
-                                <div class="card__plats__price">
-                                    35€
-                                </div>     
+                        <div class="card__plats delai-2">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Caviar osciètre
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Sur blini à la farine de blé noir
+                                    </p>
+                                    <div class="card__plats__price">
+                                        35€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Homard et espuma de potiron
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Mariné aux zestes d'orange
-                                </p>
-                                <div class="card__plats__price">
-                                    20€
-                                </div>     
+                        <div class="card__plats delai-3">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Homard et espuma de potiron
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Mariné aux zestes d'orange
+                                    </p>
+                                    <div class="card__plats__price">
+                                        20€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Foie gras de canard cuit entier
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Confiture de figue et pain toasté
-                                </p>
-                                <div class="card__plats__price">
-                                    35€
-                                </div>     
+                        <div class="card__plats delai-4">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Foie gras de canard cuit entier
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Confiture de figue et pain toasté
+                                    </p>
+                                    <div class="card__plats__price">
+                                        35€
+                                    </div>     
+                                </div>
                             </div>
-                        </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -112,58 +118,60 @@
                     <h3 class="card__heading">
                         Plats
                     </h3>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Noix de coquilles Saint-Jacques
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Sur lit de céleri-rave
-                                </p>
-                                <div class="card__plats__price">
-                                    40€
-                                </div>     
+                    <div class="card__container">
+                        <div class="card__plats delai-1">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Noix de coquilles Saint-Jacques
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Sur lit de céleri-rave
+                                    </p>
+                                    <div class="card__plats__price">
+                                        40€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Langoustine poêlée
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Purée de patate douce
-                                </p>
-                                <div class="card__plats__price">
-                                    35€
-                                </div>     
+                        <div class="card__plats delai-2">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Langoustine poêlée
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Purée de patate douce
+                                    </p>
+                                    <div class="card__plats__price">
+                                        35€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Mijoté de queue de boeuf
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Et riz sauvage aux zestes de citron
-                                </p>
-                                <div class="card__plats__price">
-                                    44€
-                                </div>     
+                        <div class="card__plats delai-3">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Mijoté de queue de boeuf
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Et riz sauvage aux zestes de citron
+                                    </p>
+                                    <div class="card__plats__price">
+                                        44€
+                                    </div>     
+                                </div>
                             </div>
-                        </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -171,58 +179,60 @@
                     <h3 class="card__heading">
                         Desserts
                     </h3>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Macaron noisette et chocolat
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Glace au caramel brun et sel de Guérande
-                                </p>
-                                <div class="card__plats__price">
-                                    18€
-                                </div>     
+                    <div class="card__container">
+                        <div class="card__plats delai-1">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Macaron noisette et chocolat
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Glace au caramel brun et sel de Guérande
+                                    </p>
+                                    <div class="card__plats__price">
+                                        18€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Baba au rhum revisité
-                            </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Avec son coulis de citron
-                                </p>
-                                <div class="card__plats__price">
-                                    22€
-                                </div>     
+                        <div class="card__plats delai-2">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Baba au rhum revisité
+                                </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Avec son coulis de citron
+                                    </p>
+                                    <div class="card__plats__price">
+                                        22€
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="card__plats">
-                        <div class="card__plats__txt">
-                            <h4 class="card__plats__heading">
-                                Tarte au citron meringuée
-                             </h4>
-                            <div class="card__plats__description">
-                                <p class="card__plats__acc">
-                                    Destructurée
-                                </p>
-                                <div class="card__plats__price">
-                                    23€
-                                </div>     
+                        <div class="card__plats delai-3">
+                            <div class="card__plats__txt">
+                                <h4 class="card__plats__heading">
+                                    Tarte au citron meringuée
+                                 </h4>
+                                <div class="card__plats__description">
+                                    <p class="card__plats__acc">
+                                        Destructurée
+                                    </p>
+                                    <div class="card__plats__price">
+                                        23€
+                                    </div>     
+                                </div>
                             </div>
-                        </div>
-                        <div class="card__plats__valid">
-                            <i class="fa-solid fa-check"></i>
+                            <div class="card__plats__valid">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
                         </div>
                     </div>
                 </article>

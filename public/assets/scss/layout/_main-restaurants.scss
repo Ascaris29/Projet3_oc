@@ -26,23 +26,23 @@
     }
     20%{
         opacity:0.2;
-        transform:translateY(-2px);
+        transform:translateY(-3px);
     }
     40%{
         opacity:0.4;
-        transform:translateY(-4px);
+        transform:translateY(-6px);
     }
     60%{
         opacity:0.6;
-        transform:translateY(-6px);
+        transform:translateY(-9px);
     }
     80%{
         opacity:0.8;
-        transform:translateY(-8px);
+        transform:translateY(-12px);
     }
     100%{
         opacity:1;
-        transform:translateY(-10px);
+        transform:translateY(-15px);
     }
 }
 
@@ -89,7 +89,7 @@
 
     &__coeur{
         position:relative;
-        @include cursor-hand;
+        cursor: pointer;
     }
     
     &__heart{
@@ -167,11 +167,10 @@
             align-items:center;
             overflow:hidden;
             justify-content: space-between;
-            animation:apparition 0.4s;
-            
+            animation:apparition 0.3s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
-            @include cursor-hand;
+            cursor: pointer;
           &:hover{
             transition: all 0.4s ease-in-out;
           }
@@ -296,4 +295,7 @@
     }
     .delai-3{
         animation-delay:$delai3;
+    }
+    .delai-4{
+        animation-delay:$delai4;
     }
