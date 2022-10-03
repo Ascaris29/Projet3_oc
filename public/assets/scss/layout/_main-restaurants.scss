@@ -167,8 +167,8 @@
             align-items:center;
             overflow:hidden;
             justify-content: space-between;
-            animation:apparition 0.2s;
-            animation-delay:0.5s;
+            animation:apparition 0.4s;
+            
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
             @include cursor-hand;
@@ -286,4 +286,14 @@
                 }
             }
         }
+    }
+
+    .delai-1{
+        animation-delay: $delai1;
+    }
+    .delai-2{
+        animation-delay: $delai2;
+    }
+    .delai-3{
+        animation-delay:$delai3;
     }

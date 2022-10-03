@@ -776,10 +776,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-animation: apparition 0.2s;
-          animation: apparition 0.2s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation: apparition 0.4s;
+          animation: apparition 0.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
@@ -935,6 +933,21 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.delai-1 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delai-2 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delai-3 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
 /*-----------------------------------------Pages elements--------------------------------------------*/
 /*--------------------------------Photo la note enchantee------------------*/
 .principal-img__photo--lne {
