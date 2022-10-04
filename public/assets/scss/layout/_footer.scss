@@ -31,7 +31,9 @@
         text-decoration:none;
         color:$white;
         font-size:$size-text;
-        @include cursor-hand;
+        &:hover{
+            color:$color-secondary;
+        }
     }
 
 }

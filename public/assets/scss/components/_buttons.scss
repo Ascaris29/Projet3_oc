@@ -4,6 +4,7 @@
     &__button{
         @include basic-button;
         box-shadow:$shadow;
+        cursor:pointer;
         a{
         }
     }
@@ -15,6 +16,11 @@
        padding:15px 40px;
        margin-top:40px;
        box-shadow:$shadow;
+       cursor:pointer;
+       animation:opacity 1s;
+       animation-delay:1s;
+       animation-fill-mode: forwards;
+       opacity:0;
        a{
        }
 
