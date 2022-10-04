@@ -7,16 +7,20 @@
     <link rel="stylesheet" type="text/css" href="public/assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="public/assets/css/main.css">
     <script src="https://kit.fontawesome.com/e65359aae8.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image" href="../public/images/icones/OMF.ico">
+    <link rel="icon" type="image/png" href="../public/images/icones/OMF.ico">
     <title>Oh My Food</title>
 </head>
 <body>
+    <div class="loader">
+        <span class="loader__item"></span>
+        <i class="fa-solid fa-utensils loader__icon"></i>
+    </div>
     <header class="header-accueil">
         <div class="header-accueil__logo">
             <img src="public/images/logo/ohmyfood.png" alt="logo du site booki" class="header-accueil__photo">
         </div>
     </header>
-    <main>
+    <main class="main-accueil">
         <section class="presentation">
             <form method="post" class="form presentation__form">
                 <div class="form__icon">
@@ -32,7 +36,7 @@
                     Découvrez des restaurants d'exception, séléctionnés par nos soins.
                 </p>
                 <button class="presentation__button">
-                    <a href="#">Explorez nos restaurants</a>
+                    Explorez nos restaurants
                 </button>
             </div>
         </section>

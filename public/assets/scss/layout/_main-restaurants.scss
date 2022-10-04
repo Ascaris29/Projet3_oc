@@ -1,50 +1,5 @@
 /*--------------------------------Main restaurants-------------------------------------*/ 
-@keyframes iconrotate{
-    from{
-        transform:rotate(90deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
- }
 
-@keyframes slide-card{
-    0% {
-        width:0;
-        
-    }
-    100%{
-        width:30px;
-        padding:30px;
-    }
-}
-
-@keyframes apparition{
-    0%{
-        opacity:0;
-        transform:translateY(0px);
-    }
-    20%{
-        opacity:0.2;
-        transform:translateY(-3px);
-    }
-    40%{
-        opacity:0.4;
-        transform:translateY(-6px);
-    }
-    60%{
-        opacity:0.6;
-        transform:translateY(-9px);
-    }
-    80%{
-        opacity:0.8;
-        transform:translateY(-12px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(-15px);
-    }
-}
 
 
 
@@ -103,7 +58,7 @@
         left:0;
         bottom:0;
         opacity:0;
-        transition:all 0.5s ease-in-out;
+        transition:all 0.2s ease-in-out;
         background-image:linear-gradient($light-secondary, $light-primary);
         background-clip:text;
         -webkit-text-stroke:0px;
@@ -143,7 +98,10 @@
             &::after{
                 position:absolute;
                 content:"";
-                width:75%;
+                /*width:75%;*/
+                animation: apparition-heading 1s;
+                animation-fill-mode: forwards;
+                animation-delay:0.5s;
                 height:3px;
                 background-color:$color-tertiary;
                 bottom:0;
@@ -165,14 +123,13 @@
             display:flex;
             position:relative;
             align-items:center;
-            overflow:hidden;
             justify-content: space-between;
             animation:apparition 0.3s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
             cursor: pointer;
           &:hover{
-            transition: all 0.4s ease-in-out;
+            
           }
             /*---------------------------------  click card__plat mobile-------------------------------*/
             &:active &__valid{
@@ -182,15 +139,18 @@
                 animation:slide-card 0.4s;
                 animation-fill-mode: forwards;
             }
-            &:active &__txt{
-             width:80%;  
-            } 
+            
             &:active &__acc{
                 overflow:hidden;
                 text-overflow: ellipsis;
-                width:70%;
                 white-space: nowrap;
             }
+            &:hover &__valid i{
+                animation: iconrotate 0.5s; 
+                animation-fill-mode: forwards;
+                padding:5px;
+            }
+            
             /*----------------------------------- hover card__plat Desktop-----------------------------*/
             @include responsive-desktop{
                 height:80px;
@@ -208,21 +168,20 @@
                   animation-fill-mode: forwards;
                   padding:5px;
                 }
-                &:hover &__txt{
-                 width:80%;  
-                } 
+               
                 &:hover &__acc{
                     overflow:hidden;
                     text-overflow: ellipsis;
                     width:70%;
                     white-space: nowrap;
                 }
+                
             }
             /*------------------------------------- hover card__plat Tablet------------------------------------*/
             @include responsive-tablet{
                 height:80px;
                 justify-content: space-between;
-            
+                
                 &:hover &__valid{
                     display:flex;
                     justify-content: center;
@@ -230,16 +189,17 @@
                     animation:slide-card 0.4s ease-out;
                     animation-fill-mode:forwards;
                 }
-                &:hover &__txt{
-                 width:70%;  
-                 transition:all 0.5s;
-                } 
+                &:hover &__valid i{
+                    animation: iconrotate 0.5s; 
+                    animation-fill-mode: forwards;
+                    padding:5px;
+                }
+                
                 &:hover &__acc{
                     overflow:hidden;
                     text-overflow: ellipsis;
                     width:70%;
                     white-space: nowrap;
-                    transition:all 0.5s;
                 }
             }
             &__txt{
@@ -266,22 +226,10 @@
                 height:100%;
                 border-radius:0 20px 20px 0;
                 overflow: hidden;
-                /*padding:30px;*/
-                transition:all 0.5s ease-in-out;
-                &:hover{
-                    
-                  
-                }
                 i{
                     background-color:$white;
-                    //
                     border-radius:50px;
-                    color:$color-tertiary;
-                    transition:all 0.5s;
-                    
-                    &:hover{
-                        
-                    }
+                    color:$color-tertiary;   
                 }
             }
         }

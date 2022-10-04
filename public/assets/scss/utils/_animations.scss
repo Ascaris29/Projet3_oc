@@ -1,0 +1,136 @@
+@keyframes iconrotate{
+    from{
+        transform:rotate(90deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+ }
+
+@keyframes slide-card{
+    0% {
+        width:0;
+        
+    }
+    100%{
+        width:30px;
+        padding:30px;
+    }
+}
+
+@keyframes apparition{
+    0%{
+        opacity:0;
+        transform:translateY(0px);
+    }
+    20%{
+        opacity:0.2;
+        transform:translateY(-3px);
+    }
+    40%{
+        opacity:0.4;
+        transform:translateY(-6px);
+    }
+    60%{
+        opacity:0.6;
+        transform:translateY(-9px);
+    }
+    80%{
+        opacity:0.8;
+        transform:translateY(-12px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes apparition-heading{
+    0%{
+        width:0%;
+        /*height:0;*/
+    }
+    100%{
+        width:75%;
+        /*height:3px;*/
+    }
+}
+
+@keyframes opacity{
+    0%{
+        opacity:0;
+    }
+    20%{
+        opacity:0.2;
+    }
+    40%{
+        opacity:0.4;
+    }
+    60%{
+        opacity:0.6;
+    }
+    80%{
+        opacity:0.8;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes loader{
+    0%{
+        opacity:1;
+        color:$color-primary;
+        top:32%;
+    }
+    10%{
+        opacity:1;
+        color:$color-secondary;
+        top:30%;
+    }
+    20%{
+        opacity:1;
+        color:$color-tertiary;
+        top:32%;
+    }
+    30%{
+        opacity:1;
+        color:$color-secondary;
+        top:30%;
+    }
+    40%{
+        opacity:1;
+        color:$color-primary;
+        top:32%;
+    }
+    50%{
+        opacity:1;
+        color:$color-secondary;
+        top:30%;
+    }
+    60%{
+        opacity:1;
+        color:$color-tertiary;
+        top:32%;
+    }
+    70%{
+        opacity:1;
+        color:$color-secondary;
+        top:30%;
+    }
+    80%{
+        opacity:1;
+        top:32%;
+        color:$color-primary;
+    }
+    90%{
+        opacity:1;
+        top:30%;
+        color:$color-secondary;
+    }
+    100%{
+        opacity:0;
+        top:32%;
+        color:$color-tertiary;
+    }
+}

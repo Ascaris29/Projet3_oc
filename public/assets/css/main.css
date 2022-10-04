@@ -42,6 +42,7 @@ body {
   margin: auto;
   -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
           box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  cursor: pointer;
 }
 .presentation__button:hover {
   background: linear-gradient(150deg, #ff93e1 5%, 30%, #a16be0 65%);
@@ -67,6 +68,14 @@ body {
   margin-top: 40px;
   -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
           box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  cursor: pointer;
+  -webkit-animation: opacity 1s;
+          animation: opacity 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
 }
 .presentation-restaurant__button:hover {
   background: linear-gradient(150deg, #ff93e1 5%, 30%, #a16be0 65%);
@@ -98,11 +107,43 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-left: 20px;
-    padding-top: 40px;
   }
 }
 .header-accueil__photo {
   width: 200px;
+}
+
+body {
+  position: relative;
+}
+
+.header-accueil, .main-accueil, footer {
+  -webkit-animation: opacity 1s;
+          animation: opacity 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader {
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: loader 5s;
+          animation: loader 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.01s;
+          animation-delay: 0.01s;
+}
+.loader__icon {
+  font-size: 100px;
+  position: relative;
 }
 
 .presentation {
@@ -438,8 +479,8 @@ body {
   left: 0;
   bottom: 0;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(#ff93e1, #a16be0);
   -webkit-background-clip: text;
@@ -508,7 +549,9 @@ body {
   text-decoration: none;
   color: #FFF;
   font-size: 1.8rem;
-  cursor: url("../../images/icones/cursor-hand.svg"), pointer;
+}
+.footer__items a:hover {
+  color: #FF79DA;
 }
 
 /*---------------------------------header restaurants--------------------------*/
@@ -540,6 +583,369 @@ body {
 }
 
 /*--------------------------------Main restaurants-------------------------------------*/
+.principal-img {
+  padding-top: 15px;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .principal-img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .principal-img {
+    height: 400px;
+  }
+}
+.principal-img__img {
+  width: 100%;
+  height: 100%;
+}
+.principal-img__photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.presentation-restaurant {
+  background-color: #FFF;
+  top: -25px;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+.presentation-restaurant__heading {
+  font-family: "Shrikhand";
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__heading {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+.presentation-restaurant__coeur {
+  position: relative;
+  cursor: pointer;
+}
+.presentation-restaurant__heart {
+  font-size: 30px;
+  opacity: 1;
+}
+.presentation-restaurant__heart--colored {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-stroke: 0px;
+  color: transparent;
+}
+.presentation-restaurant__heart--colored:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .presentation-restaurant__bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+.card {
+  padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 47.619047619%;
+    /*---------------------------------------------------*/
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 30.303030303%;
+  }
+}
+.card__heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+  width: 60px;
+}
+.card__heading::after {
+  position: absolute;
+  content: "";
+  /*width:75%;*/
+  -webkit-animation: apparition-heading 1s;
+          animation: apparition-heading 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  height: 3px;
+  background-color: #99E2D0;
+  bottom: 0;
+  left: 0;
+}
+.card__container {
+  padding-top: 20px;
+}
+.card__plats {
+  opacity: 0;
+  height: 65px;
+  margin: 20px 0;
+  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: apparition 0.3s;
+          animation: apparition 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  cursor: pointer;
+  /*---------------------------------  click card__plat mobile-------------------------------*/
+  /*----------------------------------- hover card__plat Desktop-----------------------------*/
+  /*------------------------------------- hover card__plat Tablet------------------------------------*/
+}
+.card__plats:active .card__plats__valid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: slide-card 0.4s;
+          animation: slide-card 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.card__plats:active .card__plats__acc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card__plats:hover .card__plats__valid i {
+  -webkit-animation: iconrotate 0.5s;
+          animation: iconrotate 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  padding: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .card__plats {
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card__plats:hover .card__plats__valid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-animation: slide-card 0.4s ease-out;
+            animation: slide-card 0.4s ease-out;
+    /*animation-fill-mode:both;*/
+  }
+  .card__plats:hover .card__plats__valid i {
+    -webkit-animation: iconrotate 0.5s;
+            animation: iconrotate 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    padding: 5px;
+  }
+  .card__plats:hover .card__plats__acc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__plats {
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card__plats:hover .card__plats__valid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-animation: slide-card 0.4s ease-out;
+            animation: slide-card 0.4s ease-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .card__plats:hover .card__plats__valid i {
+    -webkit-animation: iconrotate 0.5s;
+            animation: iconrotate 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    padding: 5px;
+  }
+  .card__plats:hover .card__plats__acc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+    white-space: nowrap;
+  }
+}
+.card__plats__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0 10px;
+}
+.card__plats__heading {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.card__plats__description {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card__plats__acc {
+  font-weight: 300;
+}
+.card__plats__valid {
+  display: none;
+  background-color: #99E2D0;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+}
+.card__plats__valid i {
+  background-color: #FFF;
+  border-radius: 50px;
+  color: #99E2D0;
+}
+
+.delai-1 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delai-2 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delai-3 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.delai-4 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+/*-----------------------------------------Pages elements--------------------------------------------*/
+/*--------------------------------Photo la note enchantee------------------*/
+.principal-img__photo--lne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+/*------------------------------Photo a la francaise-------------------------------*/
+.principal-img__photo--alf {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+
+/*--------------------------------Photo la note enchantee------------------*/
+.principal-img__photo--lne {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+/*--------------------------------Photo le delice des sens------------------*/
+.principal-img__photo--dds {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
+}
+
+/*------------------------------------------Animations------------------------------------------------*/
 @-webkit-keyframes iconrotate {
   from {
     -webkit-transform: rotate(90deg);
@@ -642,367 +1048,177 @@ body {
             transform: translateY(-15px);
   }
 }
-.principal-img {
-  padding-top: 15px;
-  height: 250px;
-}
-@media screen and (min-width: 768px) {
-  .principal-img {
-    height: 300px;
+@-webkit-keyframes apparition-heading {
+  0% {
+    width: 0%;
+    /*height:0;*/
+  }
+  100% {
+    width: 75%;
+    /*height:3px;*/
   }
 }
-@media screen and (min-width: 1024px) {
-  .principal-img {
-    height: 400px;
+@keyframes apparition-heading {
+  0% {
+    width: 0%;
+    /*height:0;*/
+  }
+  100% {
+    width: 75%;
+    /*height:3px;*/
   }
 }
-.principal-img__img {
-  width: 100%;
-  height: 100%;
-}
-.principal-img__photo {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.presentation-restaurant {
-  background-color: #FFF;
-  top: -25px;
-  border-radius: 30px;
-  padding: 30px 20px;
-}
-.presentation-restaurant__heading {
-  font-family: "Shrikhand";
-  font-size: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .presentation-restaurant__heading {
-    max-width: 1400px;
-    margin: auto;
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
-.presentation-restaurant__coeur {
-  position: relative;
-  cursor: pointer;
-}
-.presentation-restaurant__heart {
-  font-size: 30px;
-  opacity: 1;
-}
-.presentation-restaurant__heart--colored {
-  font-size: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
-  background-image: linear-gradient(#ff93e1, #a16be0);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-stroke: 0px;
-  color: transparent;
-}
-.presentation-restaurant__heart--colored:hover {
-  opacity: 1;
-}
-@media screen and (min-width: 768px) {
-  .presentation-restaurant__bloc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 20px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    max-width: 1400px;
-    margin: auto;
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
-
-.card {
-  padding-top: 40px;
-}
-@media screen and (min-width: 768px) {
-  .card {
-    width: 47.619047619%;
-    /*---------------------------------------------------*/
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+    color: #9356DC;
+    top: 32%;
+  }
+  10% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
+  }
+  20% {
+    opacity: 1;
+    color: #99E2D0;
+    top: 32%;
+  }
+  30% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
+  }
+  40% {
+    opacity: 1;
+    color: #9356DC;
+    top: 32%;
+  }
+  50% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
+  }
+  60% {
+    opacity: 1;
+    color: #99E2D0;
+    top: 32%;
+  }
+  70% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
+  }
+  80% {
+    opacity: 1;
+    top: 32%;
+    color: #9356DC;
+  }
+  90% {
+    opacity: 1;
+    top: 30%;
+    color: #FF79DA;
+  }
+  100% {
+    opacity: 0;
+    top: 32%;
+    color: #99E2D0;
   }
 }
-@media screen and (min-width: 1024px) {
-  .card {
-    width: 30.303030303%;
+@keyframes loader {
+  0% {
+    opacity: 1;
+    color: #9356DC;
+    top: 32%;
   }
-}
-.card__heading {
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: 300;
-  position: relative;
-  padding-bottom: 5px;
-  font-size: 1.8rem;
-  width: 60px;
-}
-.card__heading::after {
-  position: absolute;
-  content: "";
-  width: 75%;
-  height: 3px;
-  background-color: #99E2D0;
-  bottom: 0;
-  left: 0;
-}
-.card__container {
-  padding-top: 20px;
-}
-.card__plats {
-  opacity: 0;
-  height: 65px;
-  margin: 20px 0;
-  -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-          box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
-  border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation: apparition 0.3s;
-          animation: apparition 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  cursor: pointer;
-  /*---------------------------------  click card__plat mobile-------------------------------*/
-  /*----------------------------------- hover card__plat Desktop-----------------------------*/
-  /*------------------------------------- hover card__plat Tablet------------------------------------*/
-}
-.card__plats:hover {
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.card__plats:active .card__plats__valid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: slide-card 0.4s;
-          animation: slide-card 0.4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.card__plats:active .card__plats__txt {
-  width: 80%;
-}
-.card__plats:active .card__plats__acc {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 70%;
-  white-space: nowrap;
-}
-@media screen and (min-width: 1024px) {
-  .card__plats {
-    height: 80px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  10% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
   }
-  .card__plats:hover .card__plats__valid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-animation: slide-card 0.4s ease-out;
-            animation: slide-card 0.4s ease-out;
-    /*animation-fill-mode:both;*/
+  20% {
+    opacity: 1;
+    color: #99E2D0;
+    top: 32%;
   }
-  .card__plats:hover .card__plats__valid i {
-    -webkit-animation: iconrotate 0.5s;
-            animation: iconrotate 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    padding: 5px;
+  30% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
   }
-  .card__plats:hover .card__plats__txt {
-    width: 80%;
+  40% {
+    opacity: 1;
+    color: #9356DC;
+    top: 32%;
   }
-  .card__plats:hover .card__plats__acc {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 70%;
-    white-space: nowrap;
+  50% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
   }
-}
-@media screen and (min-width: 768px) {
-  .card__plats {
-    height: 80px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  60% {
+    opacity: 1;
+    color: #99E2D0;
+    top: 32%;
   }
-  .card__plats:hover .card__plats__valid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-animation: slide-card 0.4s ease-out;
-            animation: slide-card 0.4s ease-out;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+  70% {
+    opacity: 1;
+    color: #FF79DA;
+    top: 30%;
   }
-  .card__plats:hover .card__plats__txt {
-    width: 70%;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  80% {
+    opacity: 1;
+    top: 32%;
+    color: #9356DC;
   }
-  .card__plats:hover .card__plats__acc {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 70%;
-    white-space: nowrap;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  90% {
+    opacity: 1;
+    top: 30%;
+    color: #FF79DA;
   }
-}
-.card__plats__txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  margin: 0 10px;
-}
-.card__plats__heading {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-.card__plats__description {
-  font-size: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.card__plats__acc {
-  font-weight: 300;
-}
-.card__plats__valid {
-  display: none;
-  background-color: #99E2D0;
-  height: 100%;
-  border-radius: 0 20px 20px 0;
-  overflow: hidden;
-  /*padding:30px;*/
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.card__plats__valid i {
-  background-color: #FFF;
-  border-radius: 50px;
-  color: #99E2D0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.delai-1 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.delai-2 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.delai-3 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
-.delai-4 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-/*-----------------------------------------Pages elements--------------------------------------------*/
-/*--------------------------------Photo la note enchantee------------------*/
-.principal-img__photo--lne {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 55%;
-     object-position: 50% 55%;
-}
-
-/*------------------------------Photo a la francaise-------------------------------*/
-.principal-img__photo--alf {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 60%;
-     object-position: 50% 60%;
-}
-
-/*--------------------------------Photo la note enchantee------------------*/
-.principal-img__photo--lne {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 55%;
-     object-position: 50% 55%;
-}
-
-/*--------------------------------Photo le delice des sens------------------*/
-.principal-img__photo--dds {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 65%;
-     object-position: 50% 65%;
+  100% {
+    opacity: 0;
+    top: 32%;
+    color: #99E2D0;
+  }
 }
