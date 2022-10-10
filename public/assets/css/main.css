@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: "Roboto";
+  position: relative;
 }
 
 /*---------------------------------------Components---------------------------------------------*/
@@ -54,6 +55,7 @@ body {
   text-decoration: none;
   color: #FFF;
 }
+
 .presentation-restaurant__button {
   display: block;
   padding: 20px;
@@ -69,13 +71,6 @@ body {
   -webkit-box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
           box-shadow: 0px 0px 21px -11px rgb(66, 68, 90);
   cursor: pointer;
-  -webkit-animation: opacity 1s;
-          animation: opacity 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
 }
 .presentation-restaurant__button:hover {
   background: linear-gradient(150deg, #ff93e1 5%, 30%, #a16be0 65%);
@@ -87,6 +82,7 @@ body {
   text-decoration: none;
   color: #FFF;
 }
+
 /*----------------------------------------Layout--------------------------------------------------*/
 .header-accueil {
   padding-top: 30px;
@@ -113,24 +109,23 @@ body {
   width: 200px;
 }
 
-body {
-  position: relative;
-}
-
-.header-accueil, .main-accueil, footer {
-  -webkit-animation: opacity 1s;
-          animation: opacity 1s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  opacity: 0;
+.loader {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+  -webkit-animation: disparition 3s;
+          animation: disparition 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
-.loader {
-  opacity: 0;
+.loader__item {
+  opacity: 1;
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -138,12 +133,10 @@ body {
           animation: loader 5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.01s;
-          animation-delay: 0.01s;
+  color: #9356DC;
 }
 .loader__icon {
   font-size: 100px;
-  position: relative;
 }
 
 .presentation {
@@ -256,7 +249,6 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .presentation__container {
-    padding-left: 20px;
     background: transparent;
     padding-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -479,8 +471,8 @@ body {
   left: 0;
   bottom: 0;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(#ff93e1, #a16be0);
   -webkit-background-clip: text;
@@ -549,9 +541,6 @@ body {
   text-decoration: none;
   color: #FFF;
   font-size: 1.8rem;
-}
-.footer__items a:hover {
-  color: #FF79DA;
 }
 
 /*---------------------------------header restaurants--------------------------*/
@@ -649,8 +638,8 @@ body {
   left: 0;
   bottom: 0;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(#ff93e1, #a16be0);
   -webkit-background-clip: text;
@@ -683,7 +672,6 @@ body {
 @media screen and (min-width: 768px) {
   .card {
     width: 47.619047619%;
-    /*---------------------------------------------------*/
   }
 }
 @media screen and (min-width: 1024px) {
@@ -735,15 +723,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-animation: apparition 0.3s;
-          animation: apparition 0.3s;
+  -webkit-animation: apparition 0.5s;
+          animation: apparition 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   cursor: pointer;
   /*---------------------------------  click card__plat mobile-------------------------------*/
-  /*----------------------------------- hover card__plat Desktop-----------------------------*/
   /*------------------------------------- hover card__plat Tablet------------------------------------*/
 }
 .card__plats:active .card__plats__valid {
@@ -756,8 +743,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: slide-card 0.4s;
-          animation: slide-card 0.4s;
+  -webkit-animation: slide-card 0.5s;
+          animation: slide-card 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -772,41 +759,6 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   padding: 5px;
-}
-@media screen and (min-width: 1024px) {
-  .card__plats {
-    height: 80px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .card__plats:hover .card__plats__valid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-animation: slide-card 0.4s ease-out;
-            animation: slide-card 0.4s ease-out;
-    /*animation-fill-mode:both;*/
-  }
-  .card__plats:hover .card__plats__valid i {
-    -webkit-animation: iconrotate 0.5s;
-            animation: iconrotate 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    padding: 5px;
-  }
-  .card__plats:hover .card__plats__acc {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 70%;
-    white-space: nowrap;
-  }
 }
 @media screen and (min-width: 768px) {
   .card__plats {
@@ -825,8 +777,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-animation: slide-card 0.4s ease-out;
-            animation: slide-card 0.4s ease-out;
+    -webkit-animation: slide-card 0.5s ease-out;
+            animation: slide-card 0.5s ease-out;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
@@ -1108,60 +1060,130 @@ body {
     opacity: 1;
   }
 }
+@-webkit-keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes loader {
   0% {
     opacity: 1;
     color: #9356DC;
-    top: 32%;
+    top: 50%;
   }
   10% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   20% {
     opacity: 1;
     color: #99E2D0;
-    top: 32%;
+    top: 50%;
   }
   30% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   40% {
     opacity: 1;
     color: #9356DC;
-    top: 32%;
+    top: 50%;
   }
   50% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   60% {
     opacity: 1;
     color: #99E2D0;
-    top: 32%;
+    top: 50%;
   }
   70% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   80% {
-    opacity: 1;
-    top: 32%;
+    opacity: 0.5;
+    top: 50%;
     color: #9356DC;
   }
   90% {
-    opacity: 1;
-    top: 30%;
+    opacity: 0.2;
+    top: 52%;
     color: #FF79DA;
   }
   100% {
     opacity: 0;
-    top: 32%;
+    top: 50%;
     color: #99E2D0;
   }
 }
@@ -1169,56 +1191,56 @@ body {
   0% {
     opacity: 1;
     color: #9356DC;
-    top: 32%;
+    top: 50%;
   }
   10% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   20% {
     opacity: 1;
     color: #99E2D0;
-    top: 32%;
+    top: 50%;
   }
   30% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   40% {
     opacity: 1;
     color: #9356DC;
-    top: 32%;
+    top: 50%;
   }
   50% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   60% {
     opacity: 1;
     color: #99E2D0;
-    top: 32%;
+    top: 50%;
   }
   70% {
     opacity: 1;
     color: #FF79DA;
-    top: 30%;
+    top: 52%;
   }
   80% {
-    opacity: 1;
-    top: 32%;
+    opacity: 0.5;
+    top: 50%;
     color: #9356DC;
   }
   90% {
-    opacity: 1;
-    top: 30%;
+    opacity: 0.2;
+    top: 52%;
     color: #FF79DA;
   }
   100% {
     opacity: 0;
-    top: 32%;
+    top: 50%;
     color: #99E2D0;
   }
 }
