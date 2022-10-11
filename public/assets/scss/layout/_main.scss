@@ -86,7 +86,7 @@
         }
     }
     &__container{
-        background-color:$clear-back;
+        background-color:$dark-back;
         padding-bottom:60px;
         position:relative;
         @include responsive-desktop{
@@ -126,7 +126,10 @@
         @include max-width;
     }
     &__article{
+            border:none;
+            background-color:$white;
         &--lila{
+            border:none;
             background-color:lighten($color-primary, 35);
         }
     }
@@ -178,7 +181,7 @@
 }
 .restaurants{
     padding: $basic-padding;
-    background-color:$clear-back;   
+    background-color:$dark-back;   
     &__heading{
         font-size:$size-title;
         padding-bottom:20px;
