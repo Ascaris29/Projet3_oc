@@ -262,7 +262,7 @@ body {
   margin-left: 20px;
 }
 .presentation__container {
-  background-color: #fafafa;
+  background-color: #f7f7f7;
   padding-bottom: 60px;
   position: relative;
 }
@@ -310,7 +310,12 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+.fonctionnement__article {
+  border: none;
+  background-color: #FFF;
+}
 .fonctionnement__article--lila {
+  border: none;
   background-color: #f2eafb;
 }
 .fonctionnement__bloc {
@@ -383,7 +388,7 @@ body {
 
 .restaurants {
   padding: 60px 20px;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
 }
 .restaurants__heading {
   font-size: 2.5rem;
