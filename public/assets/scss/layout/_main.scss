@@ -58,15 +58,22 @@
             border:none;
             background-color:transparent;
             text-align:center;
-            font-size:17px;
+            font-size:15px;
+            color:$white;
+            &:focus{
+            outline:none;
+            }
             @include responsive-desktop{
                 margin-right:20px;
                 
             }
             &::placeholder{
                 color:$black;
-                @include responsive-desktop{
+                &:focus{
                     color:$white;
+                }
+                @include responsive-desktop{
+                    color:white;
                 }
             }
         }

@@ -4,6 +4,7 @@
     }
     to{
         transform:rotate(360deg);
+        text-align:center;
     }
  }
 
@@ -110,6 +111,7 @@
     }
     100%{
         opacity:0;
+        visibility: hidden;
     }
 }
 
@@ -168,5 +170,6 @@
         opacity:0;
         top:50%;
         color:$color-tertiary;
+       
     }
 }
