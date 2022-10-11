@@ -119,8 +119,7 @@
                 display:flex;
                 justify-content: center;
                 align-items:center;
-                animation:slide-card 0.5s;
-                animation-fill-mode: forwards;
+                width:50px;
             }  
             &:active &__acc{
                 overflow:hidden;
@@ -130,7 +129,6 @@
             &:hover &__valid i{
                 animation: iconrotate 0.5s; 
                 animation-fill-mode: forwards;
-                padding:5px;
             }
             /*------------------------------------- hover card__plat Tablet------------------------------------*/
             @include responsive-tablet{
@@ -141,15 +139,8 @@
                     display:flex;
                     justify-content: center;
                     align-items:center;
-                    animation:slide-card 0.5s ease-out;
-                    animation-fill-mode:forwards;
+                    width:50px;
                 }
-                &:hover &__valid i{
-                    animation: iconrotate 0.5s; 
-                    animation-fill-mode: forwards;
-                    padding:5px;
-                }
-                
                 &:hover &__acc{
                     overflow:hidden;
                     text-overflow: ellipsis;
@@ -176,15 +167,21 @@
                 font-weight:$font-light;
             }
             &__valid{
-                display:none;
+                width:0px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
                 background-color:$color-tertiary;
                 height:100%;
                 border-radius:0 20px 20px 0;
                 overflow: hidden;
+                transition: width 0.5s ease-in-out;
                 i{
                     background-color:$white;
                     border-radius:50px;
-                    color:$color-tertiary;   
+                    color:$color-tertiary; 
+                    padding:5px;  
+                    
                 }
             }
         }

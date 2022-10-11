@@ -196,7 +196,11 @@ body {
   border: none;
   background-color: transparent;
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
+  color: #FFF;
+}
+.presentation .form__textarea:focus {
+  outline: none;
 }
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea {
@@ -218,21 +222,36 @@ body {
 .presentation .form__textarea::placeholder {
   color: #131313;
 }
+.presentation .form__textarea::-webkit-input-placeholder:focus {
+  color: #FFF;
+}
+.presentation .form__textarea::-moz-placeholder:focus {
+  color: #FFF;
+}
+.presentation .form__textarea:-ms-input-placeholder:focus {
+  color: #FFF;
+}
+.presentation .form__textarea::-ms-input-placeholder:focus {
+  color: #FFF;
+}
+.presentation .form__textarea::placeholder:focus {
+  color: #FFF;
+}
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea::-webkit-input-placeholder {
-    color: #FFF;
+    color: white;
   }
   .presentation .form__textarea::-moz-placeholder {
-    color: #FFF;
+    color: white;
   }
   .presentation .form__textarea:-ms-input-placeholder {
-    color: #FFF;
+    color: white;
   }
   .presentation .form__textarea::-ms-input-placeholder {
-    color: #FFF;
+    color: white;
   }
   .presentation .form__textarea::placeholder {
-    color: #FFF;
+    color: white;
   }
 }
 .presentation .form__icon {
@@ -743,10 +762,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: slide-card 0.5s;
-          animation: slide-card 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  width: 50px;
 }
 .card__plats:active .card__plats__acc {
   overflow: hidden;
@@ -758,7 +774,6 @@ body {
           animation: iconrotate 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  padding: 5px;
 }
 @media screen and (min-width: 768px) {
   .card__plats {
@@ -777,17 +792,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-animation: slide-card 0.5s ease-out;
-            animation: slide-card 0.5s ease-out;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-  .card__plats:hover .card__plats__valid i {
-    -webkit-animation: iconrotate 0.5s;
-            animation: iconrotate 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    padding: 5px;
+    width: 50px;
   }
   .card__plats:hover .card__plats__acc {
     overflow: hidden;
@@ -824,16 +829,28 @@ body {
   font-weight: 300;
 }
 .card__plats__valid {
-  display: none;
+  width: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #99E2D0;
   height: 100%;
   border-radius: 0 20px 20px 0;
   overflow: hidden;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 .card__plats__valid i {
   background-color: #FFF;
   border-radius: 50px;
   color: #99E2D0;
+  padding: 5px;
 }
 
 .delai-1 {
@@ -906,6 +923,7 @@ body {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    text-align: center;
   }
 }
 @keyframes iconrotate {
@@ -916,6 +934,7 @@ body {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    text-align: center;
   }
 }
 @-webkit-keyframes slide-card {
@@ -1093,6 +1112,7 @@ body {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes disparition {
@@ -1128,6 +1148,7 @@ body {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes loader {
