@@ -90,7 +90,7 @@
                 /*width:75%;*/
                 animation: apparition-heading 1s;
                 animation-fill-mode: forwards;
-                animation-delay:0.5s;
+                animation-delay:0.8s;
                 height:3px;
                 background-color:$color-tertiary;
                 bottom:0;
@@ -175,7 +175,7 @@
                 height:100%;
                 border-radius:0 20px 20px 0;
                 overflow: hidden;
-                transition: width 0.5s ease-in-out;
+                transition: width 0.3s ease-in-out;
                 i{
                     background-color:$white;
                     border-radius:50px;

@@ -26,7 +26,6 @@ html {
 
 body {
   font-family: "Roboto";
-  position: relative;
 }
 
 /*---------------------------------------Components---------------------------------------------*/
@@ -197,7 +196,6 @@ body {
   background-color: transparent;
   text-align: center;
   font-size: 15px;
-  color: #FFF;
 }
 .presentation .form__textarea:focus {
   outline: none;
@@ -205,6 +203,7 @@ body {
 @media screen and (min-width: 1024px) {
   .presentation .form__textarea {
     margin-right: 20px;
+    color: #FFF;
   }
 }
 .presentation .form__textarea::-webkit-input-placeholder {
@@ -720,8 +719,8 @@ body {
           animation: apparition-heading 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
   height: 3px;
   background-color: #99E2D0;
   bottom: 0;
@@ -848,8 +847,8 @@ body {
   height: 100%;
   border-radius: 0 20px 20px 0;
   overflow: hidden;
-  -webkit-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 .card__plats__valid i {
   background-color: #FFF;
