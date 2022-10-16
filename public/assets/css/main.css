@@ -109,7 +109,7 @@ body {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -625,6 +625,7 @@ body {
   top: -25px;
   border-radius: 30px;
   padding: 30px 20px;
+  padding-bottom: 80px;
 }
 .presentation-restaurant__heading {
   font-family: "Shrikhand";
